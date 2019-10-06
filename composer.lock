@@ -4,8 +4,76 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a81ea5a73ebc29fdd013d76177a616e",
+    "content-hash": "6a93fd823083577e149c819d163e37f1",
     "packages": [
+        {
+            "name": "bulfaitelo/santander-scraper",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bulfaitelo/Santander-Scraper.git",
+                "reference": "41999f4eb5978409b7b7fb05a9596a526eb1ecb3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bulfaitelo/Santander-Scraper/zipball/41999f4eb5978409b7b7fb05a9596a526eb1ecb3",
+                "reference": "41999f4eb5978409b7b7fb05a9596a526eb1ecb3",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thiago Rodrigues",
+                    "email": "bulfaitelo@gmail.com",
+                    "homepage": "https://www.bulfaitelo.com.br/"
+                }
+            ],
+            "description": "The scripts with selenium use, extracts the data from the direct treasury",
+            "homepage": "https://github.com/bulfaitelo/Santander-Scraper",
+            "keywords": [
+                "Tesouro Direto",
+                "scraper"
+            ],
+            "time": "2019-02-11T12:14:00+00:00"
+        },
+        {
+            "name": "bulfaitelo/tesouro-direto-scraper",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bulfaitelo/Tesouro-Direto-Scraper.git",
+                "reference": "b08d88475ed216f78a75ead905c3961cf4869355"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bulfaitelo/Tesouro-Direto-Scraper/zipball/b08d88475ed216f78a75ead905c3961cf4869355",
+                "reference": "b08d88475ed216f78a75ead905c3961cf4869355",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thiago Rodrigues",
+                    "email": "bulfaitelo@gmail.com",
+                    "homepage": "https://www.bulfaitelo.com.br/"
+                }
+            ],
+            "description": "The scripts with selenium use, extracts the data from the direct treasury",
+            "homepage": "https://github.com/bulfaitelo/Tesouro-Direto-Scraper",
+            "keywords": [
+                "Tesouro Direto",
+                "scraper"
+            ],
+            "time": "2019-02-11T12:16:23+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -469,6 +537,34 @@
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
+            "name": "jorgejavierleon/laravelpnotify",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jorgejavierleon/LaravelPnotify.git",
+                "reference": "623bb6b374e57266369722d1344a809a10d73c9a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jorgejavierleon/LaravelPnotify/zipball/623bb6b374e57266369722d1344a809a10d73c9a",
+                "reference": "623bb6b374e57266369722d1344a809a10d73c9a",
+                "shasum": ""
+            },
+            "require-dev": {
+                "benconstable/phpspec-laravel": "~2.0",
+                "phpspec/phpspec": "~2.0",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jleon\\LaravelPnotify\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2015-09-25T11:57:01+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v6.1.0",
             "source": {
@@ -675,6 +771,126 @@
                 "psysh"
             ],
             "time": "2019-08-07T15:10:45+00:00"
+        },
+        {
+            "name": "laravelcollective/html",
+            "version": "v6.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "bcc317d21a7e04eebcc81c4109fa84feaab63590"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/bcc317d21a7e04eebcc81c4109fa84feaab63590",
+                "reference": "bcc317d21a7e04eebcc81c4109fa84feaab63590",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "^6.0",
+                "illuminate/routing": "^6.0",
+                "illuminate/session": "^6.0",
+                "illuminate/support": "^6.0",
+                "illuminate/view": "^6.0",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "illuminate/database": "^6.0",
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": "~7.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Collective\\Html\\HtmlServiceProvider"
+                    ],
+                    "aliases": {
+                        "Form": "Collective\\Html\\FormFacade",
+                        "Html": "Collective\\Html\\HtmlFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                },
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "HTML and Form Builders for the Laravel Framework",
+            "homepage": "https://laravelcollective.com",
+            "time": "2019-10-02T00:37:39+00:00"
+        },
+        {
+            "name": "lavary/laravel-menu",
+            "version": "v1.7.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lavary/laravel-menu.git",
+                "reference": "5592778b3193ae561614ecb107467469b694ab11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lavary/laravel-menu/zipball/5592778b3193ae561614ecb107467469b694ab11",
+                "reference": "5592778b3193ae561614ecb107467469b694ab11",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=5.0",
+                "illuminate/view": ">=5.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lavary\\Menu\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "Menu": "Lavary\\Menu\\Facade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Lavary\\Menu\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lavary",
+                    "email": "mrl.8081@gmail.com"
+                }
+            ],
+            "description": "A quick way to create menus in Laravel 5",
+            "homepage": "https://github.com/lavary/laravel-menu",
+            "keywords": [
+                "laravel"
+            ],
+            "time": "2019-09-06T16:28:16+00:00"
         },
         {
             "name": "league/flysystem",
