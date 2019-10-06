@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'MoneyGuard'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://moneyguard.projectt'),
 
     'asset_url' => env('ASSET_URL', null),
 
@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Sao_Paulo',
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'pt-br',
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'pt_BR',
 
     /*
     |--------------------------------------------------------------------------
@@ -175,6 +175,16 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+
+        /*
+         * Gravatar
+         */
+        Creativeorange\Gravatar\GravatarServiceProvider::class, 
+        // Laravel Pnotify
+        Jleon\LaravelPnotify\NotifyServiceProvider::class,
+        // laravel menu
+        Lavary\Menu\ServiceProvider::class,
+
     ],
 
     /*
@@ -225,6 +235,17 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        /*
+         * Gravatar
+         */
+        'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
+
+        'SideBarLog' => App\Http\Controllers\SqlLogController::class,
+        // Laravel Pnotify
+        'Notify' => Jleon\LaravelPnotify\Notify::class,
+        // LAravy laravel menu
+        'Menu'      => Lavary\Menu\Facade::class,
 
     ],
 

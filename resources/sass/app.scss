@@ -1,1 +1,41 @@
-//
+
+// Fonts
+// @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+// @import "variables";
+
+// Bootstrap
+$icon-font-path: '/fonts/bootstrap/';
+@import "vendor/twbs/bootstrap-sass/assets/stylesheets/_bootstrap";
+// @import "bootstrap";
+
+// font-awesome
+@import '~gentelella/vendors/font-awesome/scss/font-awesome';
+
+// Animate CSS
+@import '~gentelella/vendors/animate.css/animate';;
+
+// PNotify 
+@import '~gentelella/vendors/pnotify/dist/pnotify.css';
+@import '~gentelella/vendors/pnotify/dist/pnotify.buttons.css';
+
+// DateRangerPicker
+@import '~gentelella/vendors/bootstrap-daterangepicker/daterangepicker.scss';
+
+// ColorPicker
+@import '~gentelella/vendors/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css';
+
+// SwiftChery
+@import '~gentelella/vendors/switchery/dist/switchery.css';;
+
+// Gentelella
+@import 'gentelella';
+
+// DataTable
+@import '~gentelella/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css';
+
+// .navbar-laravel {
+//   background-color: #fff;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+// }

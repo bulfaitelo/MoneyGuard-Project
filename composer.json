@@ -11,12 +11,14 @@
         "php": "^7.2",
         "bulfaitelo/santander-scraper": "^1.0",
         "bulfaitelo/tesouro-direto-scraper": "^1.0",
+        "creativeorange/gravatar": "^1.0",
         "fideloper/proxy": "^4.0",
         "jorgejavierleon/laravelpnotify": "^1.0",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^6.0",
-        "lavary/laravel-menu": "^1.7"
+        "lavary/laravel-menu": "^1.7",
+        "twbs/bootstrap-sass": "^3.4"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
