@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "almasaeed2010/adminlte": "^3.0",
         "bulfaitelo/santander-scraper": "^1.0",
         "bulfaitelo/tesouro-direto-scraper": "^1.0",
         "creativeorange/gravatar": "^1.0",
