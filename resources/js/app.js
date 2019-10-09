@@ -13,4 +13,7 @@ require('jquery-knob-chif');
 require('ionicons');
 require('datatables.net');
 require('datatables.net-bs4/js/dataTables.bootstrap4');
-
+require('bootstrap-colorpicker');
+require('tempusdominus-bootstrap-4');
+require("select2/dist/js/select2");
+// require('bootstrap4-duallistbox');
