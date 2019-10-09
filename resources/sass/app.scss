@@ -1,0 +1,30 @@
+// Boostrap 4
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+// IONICONS
+@import 'node_modules/ionicons/dist/scss/ionicons-icons.scss';
+
+// FONTWAESOME
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+
+
+// ADMIN-LTE
+// @import 'node_modules/admin-lte/build/scss/AdminLTE-raw.scss';
+@import 'node_modules/admin-lte/build/scss/AdminLTE.scss';
+
+// OverlayScrollbars
+@import '~overlayscrollbars/css/OverlayScrollbars.css';
+
+// CHARTS.js
+@import '~chart.js/dist/Chart.css';
+
+// TOASTR
+@import '~toastr/build/toastr.css';
+
+@import '~sweetalert2/dist/sweetalert2.css';
+@import 'node_modules/@sweetalert2/theme-bootstrap-4/bootstrap-4.scss';
+// @import '/node_modules/';

@@ -18,8 +18,8 @@
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^6.0",
-        "lavary/laravel-menu": "^1.7",
-        "twbs/bootstrap-sass": "^3.4"
+        "lavary/laravel-menu": "^1.7"
+      
     },
     "require-dev": {
         "facade/ignition": "^1.4",
