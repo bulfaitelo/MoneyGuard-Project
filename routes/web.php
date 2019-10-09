@@ -12,12 +12,20 @@
 */
 
 Route::get('/', function () {
-	if(!Auth::guest()){
-		return redirect('/home');
-	} else {
-		return redirect()->route('login');	
-	}
+	return view('welcome');
 });
+
+Route::get('/adminlte', function () {
+	return view('admin-lte.index');	
+});
+
+// Route::get('/', function () {
+// 	if(!Auth::guest()){
+// 		return redirect('/home');
+// 	} else {
+// 		return redirect()->route('login');	
+// 	}
+// });
 
 Auth::routes();
 
