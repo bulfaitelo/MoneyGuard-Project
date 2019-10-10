@@ -1,0 +1,1 @@
+const select = require('select2');

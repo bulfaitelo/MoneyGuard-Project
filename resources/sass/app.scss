@@ -1,6 +1,13 @@
 // Boostrap 4
+// @import 'node_modules/bootstrap/scss/bootstrap.scss';
 
-@import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+// ADMIN-LTE
+// @import 'node_modules/admin-lte/build/scss/AdminLTE-raw.scss';
+@import 'node_modules/admin-lte/build/scss/AdminLTE.scss';
+// @import 'node_modules/admin-lte/build/scss/AdminLTE.scss';
+
+// @import '~admin-lte/dist/css/adminlte.css';
 
 // IONICONS
 @import 'node_modules/ionicons/dist/scss/ionicons-icons.scss';
@@ -12,9 +19,8 @@
 @import "node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
 
 
-// ADMIN-LTE
-// @import 'node_modules/admin-lte/build/scss/AdminLTE-raw.scss';
-@import 'node_modules/admin-lte/build/scss/AdminLTE.scss';
+
+
 
 // OverlayScrollbars
 @import '~overlayscrollbars/css/OverlayScrollbars.css';
@@ -36,6 +42,8 @@
 
 @import 'node_modules/tempusdominus-bootstrap-4/src/sass/tempusdominus-bootstrap-4';
 
-// @import 'node_modules/select2/src/scss/core.scss';
 @import '~select2/dist/css/select2.css';
-// @import '/node_modules/';
+@import '~admin-lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.css';
+
+// // @import '~select2/dist/css/select2.css';
+// // @import '/node_modules/';
