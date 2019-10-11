@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/adminlte', function () {
-	return view('admin-lte.index');	
+	return view('base');	
 });
 
 // Route::get('/', function () {
