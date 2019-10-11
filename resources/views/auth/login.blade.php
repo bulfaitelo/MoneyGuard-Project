@@ -1,127 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-    @section('htmlheader_title', 'Login')
-    @include('gentelella.layouts.partials.htmlheader')
+<html>
+{{-- HTML HEAD --}}
+@section('htmlheader_title', 'Login')
+@include('admin-lte.layouts.partials.html-head')
+{{-- /HTML HEAD --}}
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <b>MoneyGuard</b>
+  </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Sign in to start your session</p>
 
-  <body class="login">
-    <div>
-      <a class="hiddenanchor" id="signup"></a>
-      <a class="hiddenanchor" id="signin"></a>
+      <form method="POST" action="{{ route('login') }}">
+          @csrf
+        <div class="input-group mb-3">
+          <input id="email" type="email" placeholder="E-mail" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
-      <div class="login_wrapper">
-        {{--  login  --}}
-        <div class="animate form login_form">
-          <section class="login_content">
-            <form method="POST" action="{{ route('login') }}">
-                @csrf
-
-              <h1>Login Form</h1>
-              <div>
-                <input id="email" type="email" placeholder="E-mail" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-
-                @if ($errors->has('email'))
-                    <span class="invalid-feedback">
-                        <strong>{{ $errors->first('email') }}</strong>
-                    </span>
-                @endif
-              </div>
-              <div>
-                <input id="password" type="password" placeholder="Password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                @if ($errors->has('password'))
-                    <span class="invalid-feedback">
-                        <strong>{{ $errors->first('password') }}</strong>
-                    </span>
-                @endif
-              </div>
-              <div class="checkbox">
-                <label>
-                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                </label>
-              </div>
-              <div>
-              <button type="submit" class="btn btn-default submit">
-                  Login
-              </button>                
-                <a class="reset_pass" href="{{ route('password.request') }}">Lost your password?</a>
-              </div>
-
-              <div class="clearfix"></div>
-
-              <div class="separator">
-                <p class="change_link">New to site?
-                  <a href="#signup" class="to_register"> Create Account </a>
-                </p>
-
-                <div class="clearfix"></div>
-                <br />
-
-                <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
-                </div>
-              </div>
-            </form>
-          </section>
+          @if ($errors->has('email'))
+              <span class="invalid-feedback">
+                  <strong>{{ $errors->first('email') }}</strong>
+              </span>
+          @endif
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
         </div>
-        {{--  Create Acount  --}}
-        <div id="register" class="animate form registration_form">
-          <section class="login_content">
-            <form method="POST" action="{{ route('register') }}">
-                @csrf
-              <h1>Create Account</h1>
-              <div>                
-                <input id="name" placeholder="User Name"  type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-                @if ($errors->has('name'))
-                    <span class="invalid-feedback">
-                        <strong>{{ $errors->first('name') }}</strong>
-                    </span>
-                @endif
-              </div>
-              <div>                
-                <input id="email" placeholder="Email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-                    @if ($errors->has('email'))
-                        <span class="invalid-feedback">
-                            <strong>{{ $errors->first('email') }}</strong>
-                        </span>
-                    @endif
-              </div>
-              <div>
-                <input id="password" placeholder="Password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-                    @if ($errors->has('password'))
-                        <span class="invalid-feedback">
-                            <strong>{{ $errors->first('password') }}</strong>
-                        </span>
-                    @endif
-              </div>
-              <div>
-                    <input id="password-confirm" placeholder="Confirm Password" type="password" class="form-control" name="password_confirmation" required>
-              </div>
-              <div>
-                <button type="submit" class="btn btn-default submit">
-                    Register
-                </button>               
-              </div>
+        <div class="input-group mb-3">
+          <input id="password" type="password" placeholder="Password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
-              <div class="clearfix"></div>
-
-              <div class="separator">
-                <p class="change_link">Already a member ?
-                  <a href="#signin" class="to_register"> Log in </a>
-                </p>
-
-                <div class="clearfix"></div>
-                <br />
-
-                <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
-                </div>
-              </div>
-            </form>
-          </section>
+          @if ($errors->has('password'))
+              <span class="invalid-feedback">
+                  <strong>{{ $errors->first('password') }}</strong>
+              </span>
+          @endif
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
         </div>
-      </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="icheck-primary">
+              <input type="checkbox" id="remember" name="remember" {{ old('remember') ? 'checked' : '' }}>
+              <label for="remember">
+                Remember Me
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+      <p class="mb-1">
+        <a href="{{ route('password.request') }}">I forgot my password</a>
+      </p>
+      <p class="mb-0">
+        <a href="#" class="text-center">Register a new membership</a>
+      </p>
     </div>
-  </body>
+    <!-- /.login-card-body -->
+  </div>
+</div>
+<!-- /.login-box -->
+
+{{-- SCRIPTS --}}
+@include('admin-lte.layouts.partials.html-scripts')  
+{{-- /SCRIPTS --}}
+
+</body>
 </html>
