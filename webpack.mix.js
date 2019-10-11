@@ -36,7 +36,14 @@ mix.scripts([
     'node_modules/admin-lte/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js',
     
     // Bootstrap Switch    
-    'node_modules/admin-lte/plugins/bootstrap-switch/js/bootstrap-switch.js'
-    // InputMask
- 
+    'node_modules/admin-lte/plugins/bootstrap-switch/js/bootstrap-switch.js',
+    
+    // Ion Slider
+    'node_modules/admin-lte/plugins/ion-rangeslider/js/ion.rangeSlider.js',
+
+    // Bootstrap slider
+    'node_modules/admin-lte/plugins/bootstrap-slider/bootstrap-slider.js',
+
+
+
 ],  'public/js/components.js');
