@@ -14,8 +14,6 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')    
     .sass('resources/sass/app.scss', 'public/css');
 
-
-
 mix.scripts([
     // SELECT2
     'node_modules/admin-lte/plugins/select2/js/select2.full.js',    
@@ -44,6 +42,10 @@ mix.scripts([
     // Bootstrap slider
     'node_modules/admin-lte/plugins/bootstrap-slider/bootstrap-slider.js',
 
+    // SweetAlert2
+    'node_modules/admin-lte/plugins/sweetalert2/sweetalert2.min.js',
 
+    // Toastr 
+    'node_modules/admin-lte/plugins/toastr/toastr.min.js',
 
 ],  'public/js/components.js');
