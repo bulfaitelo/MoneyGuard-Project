@@ -1,52 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-    @section('htmlheader_title', 'Login')
-    @include('gentelella.layouts.partials.htmlheader')
+<html>
+{{-- HTML HEAD --}}
+@section('htmlheader_title', 'Password resset')
+@include('admin-lte.layouts.partials.html-head')
+{{-- /HTML HEAD --}}
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <b>MoneyGuard</b>
+  </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Reset Passwordn</p>
 
-  <body class="login">
-    <div>
-      <a class="hiddenanchor" id="signup"></a>
-      <a class="hiddenanchor" id="signin"></a>
+      <form method="POST" action="{{ route('password.email') }}">
+          @csrf
 
-      <div class="login_wrapper">
-        {{--  login  --}}
-        <div class="animate form login_form">
-          <section class="login_content">
-                <form method="POST" action="{{ route('password.email') }}">
-                    @csrf
+    
 
-              <h1>Reset Password</h1>
-              <div>
-                <input id="email" type="email" placeholder="Email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+    <div class="input-group mb-3">
+        <input id="email" type="email" placeholder="E-mail" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
-                @if ($errors->has('email'))
-                    <span class="invalid-feedback">
-                        <strong>{{ $errors->first('email') }}</strong>
-                    </span>
-                @endif
-              </div>                           
-              <div>
-                <div class="form-group row mb-0">
-                  <div class="col-md-12 offset-md-4">
-                      <button type="submit" class="btn btn-default submit">
-                          Send Password Reset Link
-                      </button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="clearfix"></div>
-
-             
-                <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
-                </div>
-              </div>
-            </form>
-          </section>
-        </div>        
+        @if ($errors->has('email'))
+            <span class="invalid-feedback">
+                <strong>{{ $errors->first('email') }}</strong>
+            </span>
+        @endif
+        <div class="input-group-append">
+          <div class="input-group-text">
+            <span class="fas fa-envelope"></span>
+          </div>
+        </div>
+      </div>        
+      <div class="row">
+        
+        <!-- /.col -->
+        <div class="col-4">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Send</button>
+        </div>
+        <!-- /.col -->
       </div>
-    </div>
-  </body>
+  </form>
+  <p class="mb-0 mt-3">
+      <a href="{{ route('login') }}">Back to Login</a>
+    </p>
+
+      
+    <!-- /.login-card-body -->
+  </div>
+</div>
+<!-- /.login-box -->
+
+{{-- SCRIPTS --}}
+@include('admin-lte.layouts.partials.html-scripts')  
+{{-- /SCRIPTS --}}
+
+</body>
 </html>
