@@ -1,21 +1,19 @@
+<script src="{{ mix('/js/app.js')}}"></script>
+{{-- <script src="{{ mix('/js/components.js')}}"></script> --}}
+<link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+<script src="https://adminlte.io/themes/dev/AdminLTE/dist/js/demo.js"></script>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | Advanced form elements</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
-    <script src="{{ mix('/js/app.js')}}"></script>
-    <script src="{{ mix('/js/forms.js')}}"></script>
-    <script src="https://adminlte.io/themes/dev/AdminLTE/dist/js/demo.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 3 | Advanced form elements</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
-  <!-- Font Awesome -->
-  {{-- <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/fontawesome-free/css/all.min.css">
+  {{-- <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- daterange picker -->
@@ -27,14 +25,14 @@
   <!-- Tempusdominus Bbootstrap 4 -->
   <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- Select2 -->
- !-- Bootstrap4 Duallistbox -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <!-- Bootstrap4 Duallistbox -->
   <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/dist/css/adminlte.min.css"> --}}
-  <!-- Google Font: Source Sans Pro -->
-  {{-- <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/select2/css/select2.min.css">
-  <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css"> --}}
-  
+  <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/dist/css/adminlte.min.css"> 
+  <!-- Google Font: Source Sans Pro --> --}}
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -46,7 +44,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="../../index3.html" class="nav-link">Home</a>
+        <a href="https://adminlte.io/themes/dev/AdminLTE/index3.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -77,7 +75,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="https://adminlte.io/themes/dev/AdminLTE/dist/img/AdminLTELogo.png" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="https://adminlte.io/themes/dev/AdminLTE/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -93,7 +91,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="https://adminlte.io/themes/dev/AdminLTE/dist/img/AdminLTELogo.png" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="https://adminlte.io/themes/dev/AdminLTE/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -109,7 +107,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="https://adminlte.io/themes/dev/AdminLTE/dist/img/AdminLTELogo.png" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="https://adminlte.io/themes/dev/AdminLTE/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -164,7 +162,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="../../index3.html" class="brand-link">
+    <a href="https://adminlte.io/themes/dev/AdminLTE/index3.html" class="brand-link">
       <img src="https://adminlte.io/themes/dev/AdminLTE/dist/img/AdminLTELogo.png"
            alt="AdminLTE Logo"
            class="brand-image img-circle elevation-3"
@@ -177,7 +175,7 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="https://adminlte.io/themes/dev/AdminLTE/dist/img/AdminLTELogo.png" class="img-circle elevation-2" alt="User Image">
+          <img src="https://adminlte.io/themes/dev/AdminLTE/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Alexander Pierce</a>
@@ -199,19 +197,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../../index.html" class="nav-link">
+                <a href="https://adminlte.io/themes/dev/AdminLTE/index.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v1</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../../index2.html" class="nav-link">
+                <a href="https://adminlte.io/themes/dev/AdminLTE/index2.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v2</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../../index3.html" class="nav-link">
+                <a href="https://adminlte.io/themes/dev/AdminLTE/index3.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v3</p>
                 </a>
@@ -591,7 +589,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../../starter.html" class="nav-link">
+                <a href="https://adminlte.io/themes/dev/AdminLTE/starter.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Starter Page</p>
                 </a>
@@ -1332,30 +1330,31 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-{{-- <script src="https://adminlte.io/themes/dev/AdminLTE/plugins/jquery/jquery.min.js"></script>
+{{-- <script src="https://adminlte.io/themes/dev/AdminLTE/plugins/jquery/jquery.min.js"></script> --}}
 <!-- Bootstrap 4 -->
 <script src="https://adminlte.io/themes/dev/AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- Select2 -->
-
+{{-- <script src="https://adminlte.io/themes/dev/AdminLTE/plugins/select2/js/select2.full.min.js"></script> --}}
 <!-- Bootstrap4 Duallistbox -->
-<script src="https://adminlte.io/themes/dev/AdminLTE/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+{{-- <script src="https://adminlte.io/themes/dev/AdminLTE/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script> --}}
 <!-- InputMask -->
-<script src="https://adminlte.io/themes/dev/AdminLTE/plugins/moment/moment.min.js"></script>
-<script src="https://adminlte.io/themes/dev/AdminLTE/plugins/inputmask/min/jquery.inputmask.bundle.min.js"></script>
+{{-- <script src="https://adminlte.io/themes/dev/AdminLTE/plugins/moment/moment.min.js"></script>
+<script src="https://adminlte.io/themes/dev/AdminLTE/plugins/inputmask/min/jquery.inputmask.bundle.min.js"></script> --}}
 <!-- date-range-picker -->
-<script src="https://adminlte.io/themes/dev/AdminLTE/plugins/daterangepicker/daterangepicker.js"></script>
-<!-- bootstrap color picker -->
+
+{{-- <!-- bootstrap color picker -->
 <script src="https://adminlte.io/themes/dev/AdminLTE/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="https://adminlte.io/themes/dev/AdminLTE/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Tempusdominus Bootstrap 4 --> 
+ <script src="https://adminlte.io/themes/dev/AdminLTE/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 <!-- Bootstrap Switch -->
-<script src="https://adminlte.io/themes/dev/AdminLTE/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+ <script src="https://adminlte.io/themes/dev/AdminLTE/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
 <!-- AdminLTE App -->
-<script src="https://adminlte.io/themes/dev/AdminLTE/dist/js/adminlte.min.js"></script>
+ <script src="https://adminlte.io/themes/dev/AdminLTE/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
- --}}
-<!-- Page script -->
-{{-- <script src="http://localhost/AdminLTE/plugins/select2/js/select2.full.min.js"></script> --}}
+ <script src="https://adminlte.io/themes/dev/AdminLTE/dist/js/demo.js"></script>
+ <script src="https://adminlte.io/themes/dev/AdminLTE/plugins/daterangepicker/daterangepicker.js"></script> 
+<!-- Page script --> --}}
+<script src="{{ mix('/js/components.js')}}"></script>
 <script>
   $(function () {
     //Initialize Select2 Elements

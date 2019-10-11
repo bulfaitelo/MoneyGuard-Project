@@ -42,8 +42,21 @@
 
 @import 'node_modules/tempusdominus-bootstrap-4/src/sass/tempusdominus-bootstrap-4';
 
-@import '~select2/dist/css/select2.css';
+// SELECT 2
+@import '~admin-lte/plugins/select2/css/select2.css';
 @import '~admin-lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.css';
+
+// Bootstrap4 Duallistbox
+@import '~admin-lte/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.css';
+// Tempusdominus Bbootstrap 4
+@import '~admin-lte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.css';
+
+// daterange picker 
+@import '~admin-lte/plugins/daterangepicker/daterangepicker.css';
+
+// color picker 
+@import '~admin-lte/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css';
+
 
 // // @import '~select2/dist/css/select2.css';
 // // @import '/node_modules/';
