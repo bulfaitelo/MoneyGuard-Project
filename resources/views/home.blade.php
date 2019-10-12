@@ -4,7 +4,7 @@
 
 
 {{--  Page title  --}}
-@section('page_title', 'HOME')
+@section('page_title', 'HOasdsdME')
 
 {{-- @section('page_title_html', '') --}}
 {{-- @section('page_search_html', '') --}}
