@@ -1,4 +1,4 @@
-@extends('gentelella.layouts.app')
+@extends('admin-lte.layouts.app')
 
 @section('htmlheader_title', 'Detalhe Log de Importação')
 

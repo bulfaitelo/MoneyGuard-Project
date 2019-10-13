@@ -12,6 +12,8 @@
 {{--  Page Content  --}}
 @section('content')
 hue br
+
+asdsd
 @endsection
 
 {{--  Optional script Blades  --}}
