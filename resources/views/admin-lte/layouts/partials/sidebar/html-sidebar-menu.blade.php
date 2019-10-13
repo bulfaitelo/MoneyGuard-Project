@@ -1,58 +1,24 @@
 <!-- sidebar-menu -->
 <nav class="mt-2">
-    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-        <!-- Add icons to the links using the .nav-icon class
-            with font-awesome or any other icon font library -->
-    <li class="nav-item has-treeview menu-open">
-        <a href="#" class="nav-link active">
-            <i class="nav-icon fas fa-home"></i>
-            <p> Home <i class="right fas fa-angle-left "></i></p>
-        </a>
-        {!! $mainMenu->asUl(['class' => 'nav nav-treeview']) !!}            
-    </li>
-    
-    <li class="nav-item has-treeview">
-        <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-chart-bar"></i>
-            <p> ATIVOS <i class="right fas fa-angle-left "></i></p>
-        </a>        
-        {!! $ativosMenu->asUl(['class' => 'nav nav-treeview']) !!}
-    </li>
+<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">    
+@foreach($test->all() as $item)  
+    @if($item->hasChildren())
+        <li @if($item->hasChildren())  @endif class="nav-item has-treeview @if($item->link->isActive) menu-open @endif ">    
+            <a @lm_attrs($item->link) class="nav-link" @lm_endattrs href="{!! $item->url() !!}"  >{!! $item->title !!} <i class="right fas fa-angle-left "></i></a>
+            <ul class="nav nav-treeview" >
+            @foreach ($item->children() as $subitem)
+                
+                <li class="nav-item">
+                    <a @lm_attrs($subitem->link) class="nav-link  @if($subitem->link->isActive) active @endif" @lm_endattrs href="{!! $subitem->url() !!}">
+                        {!!$subitem->title!!}
+                    </a>
+                </li>
+            @endforeach
+            </ul>            
+        </li>
+    @endif
+@endforeach
 
-    <li class="nav-item has-treeview">
-        <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-university"></i>
-            <p> SANTANDER <i class="right fas fa-angle-left "></i></p>
-        </a>        
-        {!! $santanderMenu->asUl(['class' => 'nav nav-treeview']) !!}
-    </li>
-
-    <li class="nav-item has-treeview">
-        <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-exclamation-circle"></i>
-            <p> LOGS <i class="right fas fa-angle-left "></i></p>
-        </a>        
-        {!! $logsMenu->asUl(['class' => 'nav nav-treeview']) !!}
-    </li>
-
-    <li class="nav-item has-treeview">
-        <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-cog"></i>
-            <p> OPÇÕES <i class="right fas fa-angle-left "></i></p>
-        </a>        
-        {!! $parametrosMenu->asUl(['class' => 'nav nav-treeview']) !!}
-    </li>
-
-    <li class="nav-header">LINKS ÚTEIS</li>
-    <li class="nav-item has-treeview">
-        <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-edit"></i>
-            <p> LINKS <i class="right fas fa-angle-left "></i></p>
-        </a>        
-        {!! $externalLinks->asUl(['class' => 'nav nav-treeview']) !!}
-    </li>
-
-
-    
-</nav>
 <!-- /.sidebar-menu -->
+</ul>
+</nav>
