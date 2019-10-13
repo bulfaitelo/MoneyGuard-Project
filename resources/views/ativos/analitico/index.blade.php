@@ -6,6 +6,7 @@
 {{--  Page title  --}}
 @section('page_title', 'Ativos Analítico')
 {{-- @section('page_title_html', '') --}}
+{{-- @section('page_breadcrumb', '') --}}
 @section('page_search_html')
 
 
@@ -16,7 +17,7 @@
           <span class="fa fa-filter"></span>
         </button>
         <div style="width: 285px; padding: 10px;" class="dropdown-menu dropdown-menu-left pull-left" role="menu">
-            {!! Form::open(['route'=>'analitico.index', 'method'=>'get', 'class'=>'form-horizontal form-label-left']) !!}                
+            {!! Form::open(['route'=>'ativos.analitico.index', 'method'=>'get', 'class'=>'form-horizontal form-label-left']) !!}                
               <div class="form-group">
                 <label for="filter">Títulos</label>
                 {!! Form::select('titulo', \App\Models\Parametros\Titulos::orderBy('nome_titulo')->pluck('nome_titulo', 'id'), $request->input('titulo'), ['placeholder' => 'Selecione o Representante', 'class'=> 'form-control']) !!} 
@@ -59,7 +60,7 @@
       @foreach($ativos as $ativo)      
         <tr>
           <td>
-            <a href="{{ route('analitico.show', $ativo->titulo_id)}}">
+            <a href="{{ route('ativos.analitico.show', $ativo->titulo_id)}}">
               <b>{{$ativo->titulo->nome()}}</b>
             </a>
           </td>

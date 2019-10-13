@@ -20,7 +20,7 @@
           <div class="clearfix"></div>
         </div>
         <div class="x_content">
-        {!! Form::open(['route'=>['protocolos.update',$protocolo->id], 'method'=>'put', 'class'=> 'form-horizontal form-label-left']) !!}
+        {!! Form::open(['route'=>['ativos.protocolos.update',$protocolo->id], 'method'=>'put', 'class'=> 'form-horizontal form-label-left']) !!}
           <div class="col-md-6">             
               <label>Titulo</label>
               <input class="form-control" value="{{$protocolo->titulo->nome()}}" disabled>

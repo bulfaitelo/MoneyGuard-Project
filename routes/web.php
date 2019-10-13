@@ -70,10 +70,10 @@ Route::group(['middleware'=> 'auth'], function() {
 	});	
 	
 	// Ativos
-	Route::group(['prefix' => 'tesouro'], function() {
+	Route::group(['prefix' => 'ativos', 'as' => 'ativos.'], function() {
+		Route::resource('/dashboard', 'Ativos\AtivosController');	
 		Route::resource('/precos', 'Ativos\PrecosTaxasController');		
 		Route::resource('/protocolos', 'Ativos\ProtocoloController');		
-		Route::resource('/', 'Ativos\AtivosController');		
 		Route::resource('/analitico', 'Ativos\AtivosAnaliticoController');		
 	});
 });

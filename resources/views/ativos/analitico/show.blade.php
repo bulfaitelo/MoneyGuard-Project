@@ -8,6 +8,7 @@
 
 @section('page_title_html', '')
 @section('page_search_html', '')
+{{-- @section('page_breadcrumb', '') --}}
 
 {{--  Page Content  --}}
 @section('content')

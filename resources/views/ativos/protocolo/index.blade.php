@@ -16,7 +16,7 @@
           <span class="fa fa-filter"></span>
         </button>
         <div style="width: 285px; padding: 10px;" class="dropdown-menu dropdown-menu-left pull-left" role="menu">
-            {!! Form::open(['route'=>'protocolos.index', 'method'=>'get', 'class'=>'form-horizontal form-label-left']) !!}                
+            {!! Form::open(['route'=>'ativos.protocolos.index', 'method'=>'get', 'class'=>'form-horizontal form-label-left']) !!}                
               <div class="form-group">
                 <label for="filter">Títulos</label>
                 {!! Form::select('titulo', \App\Models\Parametros\Titulos::orderBy('nome_titulo')->pluck('nome_titulo', 'id'), $request->input('titulo'), ['placeholder' => 'Selecione o Representante', 'class'=> 'form-control']) !!} 
@@ -67,7 +67,7 @@
         <tr class="even pointer">          
             <td class=" "><b>{{$protocolo->protocolo}}</b></td>
             <td class=" ">
-              <a href="{{ route('precos.show', $protocolo->titulo->id)}}" target="_blank">
+              <a href="{{ route('ativos.precos.show', $protocolo->titulo->id)}}" target="_blank">
                 {{$protocolo->titulo->nome()}}</td>
               </a>
             <td class=" "><b>{{$protocolo->operacao->nome_operacao}}</b></td>            
@@ -77,10 +77,10 @@
             <td class=" ">{{$protocolo->taxa_juros}}%</td>
             <td class=" money_mask">{{$protocolo->valor_total}}</td>            
             <td>                
-                <a class="btn btn-default" style="float:right" title="Detalhes" href="{{ route('protocolos.show', $protocolo->id) }}">
+                <a class="btn btn-default" style="float:right" title="Detalhes" href="{{ route('ativos.protocolos.show', $protocolo->id) }}">
                     <i class="fa fa-pie-chart"></i>
                 </a>  
-                <a class="btn btn-default" style="float:right" title="Correção" href="{{ route('protocolos.edit', $protocolo->id) }}">
+                <a class="btn btn-default" style="float:right" title="Correção" href="{{ route('ativos.protocolos.edit', $protocolo->id) }}">
                   <i class="fa fa-exclamation"></i>
               </a>                             
              </div>

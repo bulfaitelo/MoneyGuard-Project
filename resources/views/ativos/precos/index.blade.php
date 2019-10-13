@@ -29,7 +29,7 @@
       @foreach($precos as $preco)        
         <tr>
           <td>
-            <a href="{{ route('precos.show', $preco->titulo_id)}}">
+            <a href="{{ route('ativos.precos.show', $preco->titulo_id)}}">
               {{$preco->titulo->nome_titulo}}
             </a>
           </td>

@@ -25,16 +25,16 @@ class GenerateMenus
                     ->link->attr(['class'=> 'nav-link']);               
 
             });
-
+            // ATIVOS
             $menu->group(['class'=> 'nav-item'], function ($m){
                 $m->add('Ativos', '#')->link->attr(['class'=> 'nav-link']);
-                $m->ativos->add('Home', ['route' =>'index'])->prepend('<i class="far fa-circle nav-icon text-info" > </i>')
+                $m->ativos->add('Dashboard', ['route' => 'ativos.dashboard.index'])->prepend('<i class="far fa-circle nav-icon text-info" > </i>')
                     ->link->attr(['class'=> 'nav-link']);
-                $m->ativos->add('Analítico', ['route' =>'analitico.index'])->prepend('<i class="far fa-circle nav-icon text-info" > </i>')
+                $m->ativos->add('Analítico', ['route' => 'ativos.analitico.index'])->prepend('<i class="far fa-circle nav-icon text-info" > </i>')
                     ->link->attr(['class'=> 'nav-link']);
-                $m->ativos->add('Protocolos', [ 'route' => 'protocolos.index'])->prepend('<i class="far fa-circle nav-icon text-info" > </i>')
+                $m->ativos->add('Protocolos', [ 'route' => 'ativos.protocolos.index'])->prepend('<i class="far fa-circle nav-icon text-info" > </i>')
                     ->link->attr(['class'=> 'nav-link']);
-                $m->ativos->add('Preços', [ 'route' => 'precos.index'])->prepend('<i class="far fa-circle nav-icon text-info" > </i>')
+                $m->ativos->add('Preços', [ 'route' => 'ativos.precos.index'])->prepend('<i class="far fa-circle nav-icon text-info" > </i>')
                     ->link->attr(['class'=> 'nav-link']);
             });
 
