@@ -56,13 +56,6 @@ Breadcrumbs::for('ativos.precos.show', function ($trail) {
     $trail->push('Detalhes');
 });
 
-
-
-
-
-
-
-
 // Home > Parametros
 Breadcrumbs::for('titulo.index', function ($trail) {
     $trail->parent('home');
@@ -79,6 +72,29 @@ Breadcrumbs::for('titulo.edit', function ($trail) {
 // Home > LOGS
 Breadcrumbs::for('logs.import', function ($trail) {
     $trail->parent('home');
-    $trail->push('Logs', route('logs.import'));
+    $trail->push('Importação', route('logs.import'));
 });
 
+// HOME > LOGS > DETALHES
+Breadcrumbs::for('logs.import.show', function ($trail) {
+    $trail->parent('logs.import');
+    $trail->push('Detalhes');
+});
+
+// Home > BACKUP
+Breadcrumbs::for('logs.backup', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Backup', route('logs.backup'));
+});
+
+// HOME > BACKUP > DETALHES
+Breadcrumbs::for('logs.backup.show', function ($trail) {
+    $trail->parent('logs.backup');
+    $trail->push('Detalhes');
+});
+
+// Home > Schedule
+Breadcrumbs::for('schedule.index', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Backup', route('schedule.index'));
+});
