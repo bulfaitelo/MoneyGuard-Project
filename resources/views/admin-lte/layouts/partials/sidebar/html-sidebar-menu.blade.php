@@ -4,7 +4,7 @@
 @foreach($test->all() as $item)  
     @if($item->hasChildren())
         <li @if($item->hasChildren())  @endif class="nav-item has-treeview @if($item->link->isActive) menu-open @endif ">    
-            <a @lm_attrs($item->link) class="nav-link" @lm_endattrs href="{!! $item->url() !!}"  >{!! $item->title !!} <i class="right fas fa-angle-left "></i></a>
+            <a @lm_attrs($item->link) class="nav-link" @lm_endattrs href="{!! $item->url() !!}"  ><p> {!! $item->title !!} <i class="right fas fa-angle-left "></i></p></a>
             <ul class="nav nav-treeview" >
             @foreach ($item->children() as $subitem)
                 

@@ -18,7 +18,7 @@ class GenerateMenus
         \Menu::make('test', function ($menu) {            
             // HOME
             $menu->group(['class'=> 'nav-item'], function ($m){
-                $m->add('Home', '#')->link->attr(['class'=> 'nav-link']);
+                $m->add('Home', '#')->prepend('<i class="nav-icon fas fa-tachometer-alt" ></i>')->link->attr(['class'=> 'nav-link']);
                 $m->home->add('Home', 'home')->prepend('<i class="far fa-circle nav-icon" > </i>')
                     ->link->attr(['class'=> 'nav-link']);
                 $m->home->add('test', 'test')->prepend('<i class="far fa-circle nav-icon" > </i>')
