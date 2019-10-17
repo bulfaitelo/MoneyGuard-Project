@@ -18,16 +18,18 @@ class GenerateMenus
         \Menu::make('test', function ($menu) {            
             // HOME
             $menu->group(['class'=> 'nav-item'], function ($m){
-                $m->add('Home', '#')->prepend('<i class="nav-icon fas fa-tachometer-alt" ></i>')->link->attr(['class'=> 'nav-link']);
-                $m->home->add('Home', 'home')->prepend('<i class="far fa-circle nav-icon" > </i>')
+                $m->add('Home', '#')->prepend('<i class="nav-icon fas fa-home text-success" ></i>')
+                ->link->attr(['class'=> 'nav-link']);
+                $m->home->add('Home', 'home')->prepend('<i class="far fa-circle nav-icon text-success" > </i>')
                     ->link->attr(['class'=> 'nav-link']);
-                $m->home->add('test', 'test')->prepend('<i class="far fa-circle nav-icon" > </i>')
+                $m->home->add('test', 'test')->prepend('<i class="far fa-circle nav-icon text-success" > </i>')
                     ->link->attr(['class'=> 'nav-link']);               
 
             });
             // ATIVOS
             $menu->group(['class'=> 'nav-item'], function ($m){
-                $m->add('Ativos', '#')->link->attr(['class'=> 'nav-link']);
+                $m->add('Ativos', '#')->prepend('<i class="nav-icon fas fa-chart-bar text-info" ></i>')
+                ->link->attr(['class'=> 'nav-link']);
                 $m->ativos->add('Dashboard', ['route' => 'ativos.dashboard.index'])->prepend('<i class="far fa-circle nav-icon text-info" > </i>')
                     ->link->attr(['class'=> 'nav-link']);
                 $m->ativos->add('Analítico', ['route' => 'ativos.analitico.index'])->prepend('<i class="far fa-circle nav-icon text-info" > </i>')
@@ -37,9 +39,10 @@ class GenerateMenus
                 $m->ativos->add('Preços', [ 'route' => 'ativos.precos.index'])->prepend('<i class="far fa-circle nav-icon text-info" > </i>')
                     ->link->attr(['class'=> 'nav-link']);
             });
-
+            // SANTANDER
             $menu->group(['class'=> 'nav-item'], function ($m){
-                $m->add('Santander', '#')->link->attr(['class'=> 'nav-link']);
+                $m->add('Santander', '#')->prepend('<i class="nav-icon fas fa-university text-danger" ></i>')
+                ->link->attr(['class'=> 'nav-link']);
                 $m->santander->add('Home', ['route'=> 'santander.index'])->prepend('<i class="far fa-circle nav-icon text-danger" > </i>')
                     ->link->attr(['class'=> 'nav-link']);
                 $m->santander->add('Aniversário', ['route'=> 'santander.aniversario'])->prepend('<i class="far fa-circle nav-icon text-danger" > </i>')
@@ -47,9 +50,10 @@ class GenerateMenus
                 $m->santander->add('Movimentação', ['route'=> 'santander.movimentacao'])->prepend('<i class="far fa-circle nav-icon text-danger" > </i>')
                     ->link->attr(['class'=> 'nav-link']);
             });
-
+            // LOGS
             $menu->group(['class'=> 'nav-item'], function ($m){
-                $m->add('Logs', '#')->link->attr(['class'=> 'nav-link']);
+                $m->add('Logs', '#')->prepend('<i class="nav-icon fas fa-exclamation-circle" ></i>')
+                ->link->attr(['class'=> 'nav-link']);
                 $m->logs->add('Importação', ['route'=>'logs.import'])->prepend('<i class="far fa-circle nav-icon" > </i>')
                     ->link->attr(['class'=> 'nav-link']);
                 $m->logs->add('Backup', ['route'=>'logs.backup'])->prepend('<i class="far fa-circle nav-icon" > </i>')
@@ -58,16 +62,18 @@ class GenerateMenus
 
             // Parametros
             $menu->group(['class'=> 'nav-item'], function ($m){
-                $m->add('Parametros', '#')->link->attr(['class'=> 'nav-link']);
-                $m->parametros->add('Títulos', [ 'route' => 'titulo.index'])->prepend('<i class="far fa-circle nav-icon" > </i>')
+                $m->add('Parametros', '#')->prepend('<i class="nav-icon fas fa-cog text-warning" ></i>')
+                ->link->attr(['class'=> 'nav-link']);
+                $m->parametros->add('Títulos', [ 'route' => 'titulo.index'])->prepend('<i class="far fa-circle nav-icon text-warning" > </i>')
                     ->link->attr(['class'=> 'nav-link']);
-                $m->parametros->add('Schedule', [ 'route' => 'schedule.index'])->prepend('<i class="far fa-circle nav-icon" > </i>')
+                $m->parametros->add('Schedule', [ 'route' => 'schedule.index'])->prepend('<i class="far fa-circle nav-icon text-warning" > </i>')
                     ->link->attr(['class'=> 'nav-link']);
             });     
 
             // Exeternal Links
             $menu->group(['class'=> 'nav-item'], function ($m){
-                $m->add('Links', '#')->link->attr(['class'=> 'nav-link']);
+                $m->add('Links', '#')->prepend('<i class="nav-icon fas fa-edit" ></i>')
+                ->link->attr(['class'=> 'nav-link']);
                 $m->links->add('Demo Gentelella')->prepend('<i class="far fa-circle nav-icon" > </i>')
                     ->link->href('https://colorlib.com/polygon/gentelella/index.html')
                     ->attr(['target' => '_blank', 'class' => 'nav-link']);
