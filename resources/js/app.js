@@ -22,6 +22,11 @@ Vue.component('home-dash-small-graph', require('./components/DashboardSmallGraph
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+const app = new Vue({
+    el: '#app',
+});
+
+
 require('bootstrap');
 require('moment/moment');
 require('@fortawesome/fontawesome-free');
