@@ -12,3 +12,5 @@ require('jquery-knob-chif');
 require('datatables.net');
 require('datatables.net-bs4/js/dataTables.bootstrap4');
 require('admin-lte');
+require('vue');
+require('axios');

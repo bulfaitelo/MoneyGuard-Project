@@ -83,7 +83,7 @@ class GenerateMenus
                 $m->links->add('Gentelella Documentation')->prepend('<i class="far fa-circle nav-icon" > </i>')
                     ->link->href('https://puikinsh.github.io/gentelella/')
                     ->attr(['target' => '_blank', 'class' => 'nav-link']);
-                $m->links->add('Laravel Menu')->prepend('<i class="far fa-circle nav-icon" > </i>')
+                $m->links->add('Laravel Menu')->prepend('<i class="fab fa-github-alt nav-icon" > </i>')
                     ->link->href('https://github.com/lavary/laravel-menu#links-href-property')
                     ->attr(['target' => '_blank', 'class' => 'nav-link']);
                 $m->links->add('jQuery Sparklines')->prepend('<i class="far fa-circle nav-icon" > </i>')
@@ -100,7 +100,16 @@ class GenerateMenus
                     ->attr(['target' => '_blank', 'class' => 'nav-link']);                   
                 $m->links->add('adminLTE')->prepend('<i class="far fa-circle nav-icon" > </i>')
                     ->link->href('https://adminlte.io/themes/dev/AdminLTE/index2.html ')
-                    ->attr(['target' => '_blank', 'class' => 'nav-link']);                              
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);    
+                $m->links->add('Git adminLTE')->prepend('<i class="fab fa-github-alt nav-icon" > </i>')
+                    ->link->href('https://github.com/ColorlibHQ/AdminLTE ')
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);         
+                $m->links->add('Axios')->prepend('<i class="fab fa-github-alt nav-icon" > </i>')
+                    ->link->href('https://github.com/axios/axios')
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);      
+                $m->links->add('Vue JS')->prepend('<i class="fab fa-vuejs nav-icon" > </i>')
+                    ->link->href('https://vuejs.org/v2/guide/installation.html')
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);                     
             });
 
         });    
