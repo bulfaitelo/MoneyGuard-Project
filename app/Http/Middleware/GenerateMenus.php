@@ -24,7 +24,9 @@ class GenerateMenus
                 $m->home->add('Home', 'home')->prepend('<i class="far fa-circle nav-icon text-success" > </i><p>')
                     ->link->attr(['class'=> 'nav-link']);
                 $m->home->add('test', 'test')->prepend('<i class="far fa-circle nav-icon text-success" > </i><p>')
-                    ->link->attr(['class'=> 'nav-link']);               
+                    ->link->attr(['class'=> 'nav-link']);  
+                $m->home->add('vue', 'vue')->prepend('<i class="far fa-circle nav-icon text-success" > </i><p>')
+                    ->link->attr(['class'=> 'nav-link']);                
 
             });
             // ATIVOS
@@ -74,16 +76,10 @@ class GenerateMenus
             // Exeternal Links
             $menu->group(['class'=> 'nav-item'], function ($m){
                 $m->add('Links', '#')->prepend('<i class="nav-icon fas fa-edit" ></i><p>')
-                ->link->attr(['class'=> 'nav-link']);
-                $m->links->add('Demo Gentelella')->prepend('<i class="far fa-circle nav-icon" > </i><p>')
-                    ->link->href('https://colorlib.com/polygon/gentelella/index.html')
-                    ->attr(['target' => '_blank', 'class' => 'nav-link']);
-                $m->links->add('Gentelella Git')->prepend('<i class="far fa-circle nav-icon" > </i><p>')
-                    ->link->href('https://github.com/puikinsh/gentelella')
-                    ->attr(['target' => '_blank', 'class' => 'nav-link']);
-                $m->links->add('Gentelella Documentation')->prepend('<i class="far fa-circle nav-icon" > </i><p>')
-                    ->link->href('https://puikinsh.github.io/gentelella/')
-                    ->attr(['target' => '_blank', 'class' => 'nav-link']);
+                    ->link->attr(['class'=> 'nav-link']);   
+                $m->links->add('Font Awesome')->prepend('<i class="far fa-circle nav-icon" > </i><p>')
+                    ->link->href('https://fontawesome.com/icons?d=gallery')
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);                                               
                 $m->links->add('Laravel Menu')->prepend('<i class="fab fa-github-alt nav-icon" > </i><p>')
                     ->link->href('https://github.com/lavary/laravel-menu#links-href-property')
                     ->attr(['target' => '_blank', 'class' => 'nav-link']);
