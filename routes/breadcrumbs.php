@@ -98,3 +98,8 @@ Breadcrumbs::for('schedule.index', function ($trail) {
     $trail->parent('home');
     $trail->push('Backup', route('schedule.index'));
 });
+
+// Vue test
+Breadcrumbs::for('vue', function ($trail) {
+    $trail->push('VUE', route('vue'));
+});

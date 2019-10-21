@@ -80,3 +80,6 @@ Route::group(['middleware'=> 'auth'], function() {
 
 // Home
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/vue', function(){
+	return view('vue');
+})->name('vue');
