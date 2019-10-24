@@ -14,11 +14,11 @@ use DB;
 class HomeApiController extends Controller
 {
     /**
-     * Retorna os valores dos remdimento Bruto diarios das corretoeras para o charts.js.
+     * Retorna os valores dos Rendimento Bruto diarios das corretoeras para o charts.js.
      *
      * @return string
      */
-    public function homeGraphicsRemdimentoBruto(Request $request){
+    public function homeGraphicsRendimentoBruto(Request $request){
 
         $this->validate($request, [
             'start_date' =>'required|date', 
@@ -194,11 +194,11 @@ class HomeApiController extends Controller
 
 
     /**
-     * Retorna os valores dos remdimento liquido  diarios das corretoeras para o charts.js.
+     * Retorna os valores dos Rendimento liquido  diarios das corretoeras para o charts.js.
      *
      * @return string
      */
-    public function homeGraphicsRemdimentoLiquido (Request $request){
+    public function homeGraphicsRendimentoLiquido (Request $request){
         // dd($request->input());
 
         $this->validate($request, [
@@ -709,5 +709,79 @@ class HomeApiController extends Controller
         }
 
             
+    }
+
+    /**
+     * Retorna os valores dos Rendimento separdos por corretora.
+     *
+     * @return string
+     */
+    public function homeChartRendimentoCorretora() {
+        $dados = [
+            'corretora' => 'vérios',
+            'valor' => '1.124,99',
+            'rendimento' => '-10',
+            'url' => 'home',
+            'chartdata' => [
+
+                'labels' => [
+                    4,5,6,9,10, 12, 13,13,14
+                ],
+                'datasets' => [                   
+                    [
+                        'data' => [
+                            4764.86, 4763.48, 4764.63, 4762.50, 4761.79, 4753.74, 4747.48, 4750.13, 4746.47,
+                            ]
+                    ]
+                ]
+                
+            ]
+        ] ;
+
+        $dados2 = [
+            'corretora' => 'easy',
+            'valor' => '2.124,99',
+            'rendimento' => '-10',
+            'url' => 'home',
+            'chartdata' => [
+
+                'labels' => [
+                    4,5,6,9,10, 12, 13,13,14
+                ],
+                'datasets' => [                   
+                    [
+                        'data' => [
+                            13352.05, 13348.88, 13349.46, 13345.17, 13345.94, 13335.37, 13326.46, 13327.40, 13319.42
+                            ]
+                    ]
+                ]
+                
+            ]
+        ] ;
+
+        $dados3 = [
+            'corretora' => 'total',
+            'valor' => '3.124,99',
+            'rendimento' => '-10',
+            'url' => 'home',
+            'chartdata' => [
+
+                'labels' => [
+                    4,5,6,9,10, 12, 13,13,14
+                ],
+                'datasets' => [                   
+                    [
+                        'data' => [
+                            18370.32, 18365.53, 18367.11, 18360.65, 18360.64, 18332.02, 18306.85, 18310.4, 18298.53,
+                            ]
+                    ]
+                ]
+                
+            ]
+        ] ;
+        $return[] = $dados;
+        $return[] = $dados2;
+        $return[] = $dados3;        
+        return response()->json($return);
     }
 }

@@ -52,6 +52,7 @@ Route::group(['middleware'=> 'auth'], function() {
 		Route::post('/home_rendimento_liquido', 'HomeApiController@homeGraphicsRemdimentoliquido');		
 		Route::post('/santander_rendimento', 'Santander\SantanderApiController@homeGraphicsRemdimento');		
 		Route::post('/ativo_preco', 'Ativos\AtivosApiController@homeGraphicsPreco');
+		Route::get('/home_dash_grafico_evo', 'HomeApiController@homeChartRendimentoCorretora');
 	});	
 
 	// Parameters
