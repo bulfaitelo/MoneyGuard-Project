@@ -4,7 +4,7 @@
 
 
 {{--  Page title  --}}
-@section('page_title', 'Home ')
+{{-- @section('page_title', 'Home ') --}}
 
 {{-- @section('page_title_html', '') --}}
 @section('page_breadcrumb', '')
@@ -25,8 +25,4 @@
 
 {{--  Optional script Blades  --}}
 @section('script_blade')
-<script src="https://adminlte.io/themes/dev/AdminLTE/dist/js/demo.js"></script>
-<script src="https://adminlte.io/themes/dev/AdminLTE/dist/js/pages/dashboard3.js"></script>
-
-
 @endsection
