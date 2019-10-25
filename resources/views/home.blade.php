@@ -11,10 +11,18 @@
 
 {{--  Page Content  --}}
 @section('content')
+{{-- DASHBOARD --}}
 <home-dash-small-graph></home-dash-small-graph>
-{{-- <example-component></example-component> --}}
-
+<div class="row">
+    <div class="col-md-9">
+        asdasdsd
+    </div>
+    <div class="col-md-3">
+        <home-dash-month-info></home-dash-month-info>
+    </div>
+</div>
  
+
 
 
 

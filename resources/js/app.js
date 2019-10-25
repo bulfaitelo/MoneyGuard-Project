@@ -15,6 +15,7 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('home-dash-small-graph', require('./components/DashboardSmallCard.vue').default);
+Vue.component('home-dash-month-info', require('./components/DashboardMonthInfo.vue').default);
 // Vue.component('chart-vue', require('./components/ChartTest.vue').default);
 
 /**
