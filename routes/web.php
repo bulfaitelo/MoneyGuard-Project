@@ -77,6 +77,11 @@ Route::group(['middleware'=> 'auth'], function() {
 		Route::resource('/protocolos', 'Ativos\ProtocoloController');		
 		Route::resource('/analitico', 'Ativos\AtivosAnaliticoController');		
 	});
+
+	// Configuração
+	Route::group(['prefix' => 'config', 'as' => 'config.'], function () {
+		Route::resource('/user/dashboard', 'User\UserDashboardConfigController');
+	});
 });
 
 // Home

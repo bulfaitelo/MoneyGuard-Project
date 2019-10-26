@@ -103,3 +103,9 @@ Breadcrumbs::for('schedule.index', function ($trail) {
 Breadcrumbs::for('vue', function ($trail) {
     $trail->push('VUE', route('vue'));
 });
+
+
+Breadcrumbs::for('config.dashboard.index', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Configurações / Dashboard', route('config.dashboard.index'));
+});
