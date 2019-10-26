@@ -14,6 +14,7 @@
         "bulfaitelo/tesouro-direto-scraper": "^1.0",
         "creativeorange/gravatar": "^1.0",
         "davejamesmiller/laravel-breadcrumbs": "^5.3",
+        "doctrine/dbal": "^2.9",
         "fideloper/proxy": "^4.0",
         "jorgejavierleon/laravelpnotify": "^1.0",
         "laravel/framework": "^6.0",
