@@ -16,13 +16,27 @@
         <span class="float-right text-muted text-sm">12 hours</span>
         </a> --}}
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" title="Logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >
-        <p>  <i class="fas fa-sign-out-alt"></i>  Logout </p>
+        <h6 class="dropdown-header">
+            <i class="fas fa-cogs"></i>
+            Configurações
+        </h6>
+        <a href="{{ route('config.dashboard.index') }}" class="dropdown-item">
+            <i class="fas fa-border-style"> </i> Dashboard            
+        </a>
+        
+        
+        <div class="dropdown-divider"></div>
+        <a href="{{ route('logout') }}" class="dropdown-item float-right dropdown-footer" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >
+            <span class="float-right" >    
+                <i class="fas fa-sign-out-alt"></i>  Logout 
+            </span>
+        </a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
         </form>
-        </a>
-        <div class="dropdown-divider"></div>
-        
     </div>
 </li>
+
+
+
+
