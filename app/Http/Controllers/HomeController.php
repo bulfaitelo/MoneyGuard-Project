@@ -95,7 +95,7 @@ class HomeController extends Controller
             $count++;
         }
         // dd($return);
-        return $return;
+        return isset($return);
     }    
 
     
@@ -131,6 +131,6 @@ class HomeController extends Controller
                    $mes_pivo = $moth->format('F');
                }
         }
-        return $rendimento;
+        return isset($rendimento);
     }
 }
