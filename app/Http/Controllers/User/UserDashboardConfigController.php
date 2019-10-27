@@ -6,6 +6,9 @@ namespace App\Http\Controllers\User;
 use App\Models\User\UserDashboardConfig;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Auth;
+use App\Models\Parametros\Representantes;
+
 
 
 class UserDashboardConfigController extends Controller
@@ -18,7 +21,10 @@ class UserDashboardConfigController extends Controller
     public function index()
     {
         //
-        return view('config.index-dashboard');
+
+        $representantes = Representantes::pluck('nome_representante', 'id');
+        
+        return view('config.index-dashboard', compact('representantes'));
     }
 
     /**

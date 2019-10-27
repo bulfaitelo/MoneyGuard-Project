@@ -15,7 +15,7 @@ class UpdateTitulos extends Migration
     {
         Schema::table('titulos', function (Blueprint $table) {
             $table->string('border_color', 30)->nullable()->after('color');            
-            // $table->renameColumn('color', 'back_color');
+            $table->renameColumn('color', 'back_color');
         });
     }
 
