@@ -77,6 +77,9 @@ class GenerateMenus
             $menu->group(['class'=> 'nav-item'], function ($m){
                 $m->add('Links', '#')->prepend('<i class="nav-icon fas fa-edit" ></i><p>')
                     ->link->attr(['class'=> 'nav-link']);   
+                $m->links->add('Laravel Collective')->prepend('<i class="fab fa-vuejs nav-icon" > </i><p>')
+                    ->link->href('https://laravelcollective.com/docs/6.0/html')
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);    
                 $m->links->add('Font Awesome')->prepend('<i class="far fa-circle nav-icon" > </i><p>')
                     ->link->href('https://fontawesome.com/icons?d=gallery')
                     ->attr(['target' => '_blank', 'class' => 'nav-link']);                                               
