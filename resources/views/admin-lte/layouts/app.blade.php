@@ -36,5 +36,10 @@
 @include('admin-lte.layouts.partials.html-scripts')  
 {{-- /SCRIPTS --}}
 
+{{-- ALERTS --}}
+@include('admin-lte.layouts.partials.script-footer-alert')  
+{{-- /ALERTS --}}
+
+
 </body>
 </html>
