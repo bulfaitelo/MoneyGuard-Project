@@ -42,7 +42,16 @@ class User extends Authenticatable
      *
      * 
      */
-    public function dashboard() {
-        return $this->hasMany(\App\Models\User\UserDashboardConfig::class);
+    public function dashboard($config_id = null ) {      
+        if(!$config_id){
+            dd('DashBoard recebe um parametro dashboard("item id" )');
+        }
+        $dash = $this->hasMany(\App\Models\User\DashboardConfig::class)
+            ->where('config_id', $config_id)            
+            ->get();
+        foreach ($dash as $key => $value) {
+            $dashboard[] = $value->item_id;
+        }        
+        return $dashboard;
     }
 }
