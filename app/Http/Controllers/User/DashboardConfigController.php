@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\User;
 
 
-use App\Models\User\UserDashboardConfig;
+use App\Models\User\DashboardConfig;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Auth;
@@ -12,7 +12,7 @@ use App\Models\Ativos\AtivosExtrato;
 
 
 
-class UserDashboardConfigController extends Controller
+class DashboardConfigController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -61,12 +61,12 @@ class UserDashboardConfigController extends Controller
         ]);
 
         // Auth:user()->dashboard()->sync($itens, ['config_id' => 1]);
-        $userDash = new UserDashboardConfig();
+        $userDash = new DashboardConfig();
         $userDash->where('user_id', Auth::user()->id)
             ->where('config_id', '1')
             ->delete();
         foreach ($request->input('dashborard_graph') as $item) {            
-            $userDash = new UserDashboardConfig();
+            $userDash = new DashboardConfig();
             $userDash->insert(
                     ['item_id' => $item,
                     'config_id' => '1',
@@ -86,10 +86,10 @@ class UserDashboardConfigController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User\UserDashboardConfig  $userDashboardConfig
+     * @param  \App\Models\User\DashboardConfig  $DashboardConfig
      * @return \Illuminate\Http\Response
      */
-    public function show(UserDashboardConfig $userDashboardConfig)
+    public function show(DashboardConfig $DashboardConfig)
     {
         //
     }
@@ -97,10 +97,10 @@ class UserDashboardConfigController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User\UserDashboardConfig  $userDashboardConfig
+     * @param  \App\Models\User\DashboardConfig  $DashboardConfig
      * @return \Illuminate\Http\Response
      */
-    public function edit(UserDashboardConfig $userDashboardConfig)
+    public function edit(DashboardConfig $DashboardConfig)
     {
         //
     }
@@ -109,10 +109,10 @@ class UserDashboardConfigController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User\UserDashboardConfig  $userDashboardConfig
+     * @param  \App\Models\User\DashboardConfig  $DashboardConfig
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, UserDashboardConfig $userDashboardConfig)
+    public function update(Request $request, DashboardConfig $DashboardConfig)
     {
         //
     }
@@ -120,10 +120,10 @@ class UserDashboardConfigController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User\UserDashboardConfig  $userDashboardConfig
+     * @param  \App\Models\User\DashboardConfig  $DashboardConfig
      * @return \Illuminate\Http\Response
      */
-    public function destroy(UserDashboardConfig $userDashboardConfig)
+    public function destroy(DashboardConfig $DashboardConfig)
     {
         //
     }
