@@ -14,7 +14,7 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('home-dash-small-graph', require('./components/DashboardSmallCard.vue').default);
+Vue.component('home-dash-small-graph', require('./components/DashboardSmallMonthGraph.vue').default);
 Vue.component('home-dash-month-info', require('./components/DashboardMonthInfo.vue').default);
 // Vue.component('chart-vue', require('./components/ChartTest.vue').default);
 
