@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\User;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -38,20 +38,24 @@ class User extends Authenticatable
     ];
 
     /**
-     * Retorna a configuração da dashboard
-     *
-     * 
+     * Retorna a configuração da dashboard quando recebe um parametro
+     * @param Var = null
+     * @return object / Array
      */
     public function dashboard($config_id = null ) {      
         if(!$config_id){
-            dd('DashBoard recebe um parametro dashboard("item id" )');
+            return $this->hasMany(\App\Models\User\DashboardConfig::class);
         }
-        $dash = $this->hasMany(\App\Models\User\DashboardConfig::class)
-            ->where('config_id', $config_id)            
-            ->get();
-        foreach ($dash as $key => $value) {
-            $dashboard[] = $value->item_id;
-        }        
-        return $dashboard;
+        else{
+            $dash = $this->hasMany(\App\Models\User\DashboardConfig::class)
+                ->where('config_id', $config_id)            
+                ->get();
+            foreach ($dash as $key => $value) {
+                $dashboard[] = $value->item_id;
+            }
+            if(isset($dashboard)){
+                return $dashboard;
+            }        
+        }
     }
 }

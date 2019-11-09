@@ -32,8 +32,12 @@ class DashboardConfigController extends Controller
         }
         // dd($userRepresentantes[0]->representante->nome_representante);        
         $representantes = Representantes::pluck('nome_representante', 'id');   
-        $representantes[0] = "TODOS"; // ISSO é ganbiarra ?        
-        return view('config.index-dashboard', compact('representantes'));
+        $representantes[0] = "TODOS"; // ISSO é ganbiarra ?   
+        
+        //
+        $user_representantes = Auth::User()->dashboard(1);
+        // dd($user_representantes);
+        return view('config.index-dashboard', compact('representantes', 'user_representantes'));
     }
 
     /**
@@ -55,29 +59,30 @@ class DashboardConfigController extends Controller
     public function store(Request $request)
     {
 
-        // dashborard_graph
+        // dashboard_graph
         $request->validate([
-            'dashborard_graph' => 'nullable|array'
-        ]);
-
-        // Auth:user()->dashboard()->sync($itens, ['config_id' => 1]);
+            'dashboard_graph' => 'nullable|array'
+        ]);        
+        
         $userDash = new DashboardConfig();
         $userDash->where('user_id', Auth::user()->id)
             ->where('config_id', '1')
             ->delete();
-        foreach ($request->input('dashborard_graph') as $item) {            
-            $userDash = new DashboardConfig();
-            $userDash->insert(
-                    ['item_id' => $item,
-                    'config_id' => '1',
-                    'user_id'=> Auth::user()->id
-                    ]
-            );           
-        }         
+        if(is_array($request->input('dashboard_graph'))){
+            foreach ($request->input('dashboard_graph') as $item) {            
+                $userDash = new DashboardConfig();
+                $userDash->insert(
+                        ['item_id' => $item,
+                        'config_id' => '1',
+                        'user_id'=> Auth::user()->id
+                        ]
+                );           
+            }  
+        }
         
 
         
-        return redirect()->back()->with('success', 'Foi');   
+        return redirect()->back()->with('success', 'Configurações atualizadas!');   
         // return redirect('home')->with('success', 'lorem');
 
         
