@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\User\User;
 use App\Models\TesouroLogs;
 use Carbon\Carbon;
 use App\Models\AtivosExtrato;

@@ -80,7 +80,7 @@ Route::group(['middleware'=> 'auth'], function() {
 
 	// Configuração
 	Route::group(['prefix' => 'config', 'as' => 'config.'], function () {
-		Route::resource('/user/dashboard', 'User\UserDashboardConfigController');
+		Route::resource('/user/dashboard', 'User\DashboardConfigController');
 	});
 });
 
