@@ -12,7 +12,7 @@ use Storage;
 use App\Models\SantanderExtrato;
 use App\Models\SantanderAniversario;
 use App\Models\ImportLog;
-use App\Models\User;
+use App\Models\User\User;
 
 class ScheduleSantanderScript extends Command
 {

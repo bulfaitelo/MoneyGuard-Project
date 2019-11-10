@@ -13,7 +13,7 @@ use App\Models\Parametros\Representantes;
 use App\Models\Parametros\Titulos;
 use App\Models\Parametros\Operacao;
 use App\Models\Parametros\Situacao;
-use App\Models\User;
+use App\Models\User\User;
 use App\Models\DataImport;
 use App\Models\Ativos\AtivosExtrato;
 
