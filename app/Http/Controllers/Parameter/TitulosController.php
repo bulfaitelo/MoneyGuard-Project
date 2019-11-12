@@ -6,7 +6,6 @@ use App\Models\Parametros\Titulos;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Session;
-use Notify;
 
 class TitulosController extends Controller
 {
