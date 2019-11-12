@@ -67,6 +67,8 @@ class GenerateMenus
             $menu->group(['class'=> 'nav-item'], function ($m){
                 $m->add('Parametros', '#')->prepend('<i class="nav-icon fas fa-cog text-warning" ></i><p>')
                 ->link->attr(['class'=> 'nav-link']);
+                $m->parametros->add('Representantes', [ 'route' => 'representante.index'])->prepend('<i class="far fa-circle nav-icon text-warning" > </i><p>')
+                    ->link->attr(['class'=> 'nav-link']);
                 $m->parametros->add('Títulos', [ 'route' => 'titulo.index'])->prepend('<i class="far fa-circle nav-icon text-warning" > </i><p>')
                     ->link->attr(['class'=> 'nav-link']);
                 $m->parametros->add('Schedule', [ 'route' => 'schedule.index'])->prepend('<i class="far fa-circle nav-icon text-warning" > </i><p>')

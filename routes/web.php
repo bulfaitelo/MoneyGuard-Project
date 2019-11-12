@@ -58,6 +58,7 @@ Route::group(['middleware'=> 'auth'], function() {
 	// Parameters
 	Route::group(['prefix' => 'options'], function() {
 		Route::resource('/titulo', 'Parameter\TitulosController');
+		Route::resource('/representante', 'Parameter\RepresentantesController');
 		Route::get('/schedule', 'Sys\scheduleController@index')->name('schedule.index');
 		Route::post('/schedule', 'Sys\scheduleController@index')->name('schedule.index');
 		Route::get('/schedule/sync', 'Sys\scheduleController@sync')->name('schedule.sync');

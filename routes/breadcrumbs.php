@@ -61,10 +61,24 @@ Breadcrumbs::for('titulo.index', function ($trail) {
     $trail->parent('home');
     $trail->push('Titulos', route('titulo.index'));
 });
-// 
+
+// Home > Parametros
+Breadcrumbs::for('representante.index', function ($trail) {
+    $trail->parent('home');
+    $trail->push('representantes', route('representante.index'));
+});
+
+// Home > Parametros > Titulo
 Breadcrumbs::for('titulo.edit', function ($trail) {
     $trail->parent('home');
     $trail->push('Titulos', route('titulo.index'));
+    $trail->push('Editar');
+});
+
+// Home > Parametros > Representantes
+Breadcrumbs::for('representante.edit', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Representantes', route('representante.index'));
     $trail->push('Editar');
 });
 
