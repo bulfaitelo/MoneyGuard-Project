@@ -12,7 +12,7 @@ use App\Mail\SqlBackupLog;
 // MODEL
 use App\Models\ImportLog;
 use App\Models\SqlLog;
-use App\Models\User;
+use App\Models\User\User;
 use App\Models\Ativos\AtivosExtrato;
 use App\Models\Ativos\AtivosProtocolo;
 use App\Models\Ativos\AtivosPrecosTaxas;

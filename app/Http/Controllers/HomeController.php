@@ -30,7 +30,7 @@ class HomeController extends Controller
     public function index()
     {        
         
-        $home_graphic = $this->homeGraphics();
+        // $home_graphic = $this->homeGraphics();
         $rendimento_mensal = $this->homeRendimetos();        
         // dd($rendimento_mensal);
         return view('home', compact('home_graphic', 'rendimento_mensal'));
@@ -42,61 +42,61 @@ class HomeController extends Controller
      *
      * @return string
      */
-    public function homeGraphics(){    
-        $array_result = DB::table('ativos_extratos')
-            ->join('titulos','titulo_id', '=', 'titulos.id' )
-            ->join('representantes','representante_id', '=', 'representantes.id' )
-            ->join('data_imports','data_import_id', '=', 'data_imports.id' )
-            ->select('representantes.nome_representante', DB::raw('SUM(valor_bruto_atual) as valor'))
-            ->where('user_id', Auth::user()->id)         
-            ->groupBy('representantes.nome_representante')
-            ->groupBy('data_imports.data_import')
-            ->orderBy('data_imports.data_import', 'DESC')
-            ->take(32)
-            ->get();        
-            // dd($array_result);
-        // Tesouro Direto
-        foreach ($array_result as $value) {            
-            if(isset($return[trim($value->nome_representante)])){
-                $return[trim($value->nome_representante)] = $return[trim($value->nome_representante)].", ".$value->valor  ;
-            }else{
-                $return[trim($value->nome_representante)] = $value->valor;
-                $value_day = trim($value->nome_representante).'_day';
-                $return[$value_day] = number_format($value->valor, 2, ',', '.');
-            }            
-        }
+    // public function homeGraphics(){    
+    //     $array_result = DB::table('ativos_extratos')
+    //         ->join('titulos','titulo_id', '=', 'titulos.id' )
+    //         ->join('representantes','representante_id', '=', 'representantes.id' )
+    //         ->join('data_imports','data_import_id', '=', 'data_imports.id' )
+    //         ->select('representantes.nome_representante', DB::raw('SUM(valor_bruto_atual) as valor'))
+    //         ->where('user_id', Auth::user()->id)         
+    //         ->groupBy('representantes.nome_representante')
+    //         ->groupBy('data_imports.data_import')
+    //         ->orderBy('data_imports.data_import', 'DESC')
+    //         ->take(32)
+    //         ->get();        
+    //         // dd($array_result);
+    //     // Tesouro Direto
+    //     foreach ($array_result as $value) {            
+    //         if(isset($return[trim($value->nome_representante)])){
+    //             $return[trim($value->nome_representante)] = $return[trim($value->nome_representante)].", ".$value->valor  ;
+    //         }else{
+    //             $return[trim($value->nome_representante)] = $value->valor;
+    //             $value_day = trim($value->nome_representante).'_day';
+    //             $return[$value_day] = number_format($value->valor, 2, ',', '.');
+    //         }            
+    //     }
         
-        // Santander
-        $santander_temp = SantanderExtrato::take(15)->orderBy('documento', 'DESC')->get();
-        // echo "<pre>";
-        foreach ($santander_temp as $value) {
-            $total_temp[] = $value->saldo;
-            // var_dump("ID:".$value->data." SALDO:".$value->saldo);
-            if(isset($return["SANTANDER"])){
-                $return['SANTANDER'] = $return['SANTANDER'].", ".$value->saldo; 
-            }
-            else{
-                $return['SANTANDER_day'] = number_format($value->saldo, 2, ',', '.');
-                $return['SANTANDER'] = $value->saldo;
-            }            
-        }
+    //     // Santander
+    //     $santander_temp = SantanderExtrato::take(15)->orderBy('documento', 'DESC')->get();
+    //     // echo "<pre>";
+    //     foreach ($santander_temp as $value) {
+    //         $total_temp[] = $value->saldo;
+    //         // var_dump("ID:".$value->data." SALDO:".$value->saldo);
+    //         if(isset($return["SANTANDER"])){
+    //             $return['SANTANDER'] = $return['SANTANDER'].", ".$value->saldo; 
+    //         }
+    //         else{
+    //             $return['SANTANDER_day'] = number_format($value->saldo, 2, ',', '.');
+    //             $return['SANTANDER'] = $value->saldo;
+    //         }            
+    //     }
 
-        $array_total = DB::select('SELECT sum(valor_bruto_atual) as valor FROM ativos_extratos where user_id = '.Auth::user()->id.' group by CAST(created_at AS DATE) order by CAST(created_at AS DATE) DESC LIMIT 15 ');
-        $count = 0;
-        foreach ($array_total as $value) {                  
-            if($count == 0){
-                $return['TOTAL_day'] = number_format($total_temp[0]+$value->valor, 2, ',', '.');
-            }
-            if(isset($return['TOTAL'])){
-                $return['TOTAL'] = $return['TOTAL'].", ".$total_temp[$count]+=$value->valor; 
-            }else{
-                $return['TOTAL'] = $total_temp[$count]+=$value->valor;
-            }
-            $count++;
-        }
-        // dd($return);
-        return isset($return);
-    }    
+    //     $array_total = DB::select('SELECT sum(valor_bruto_atual) as valor FROM ativos_extratos where user_id = '.Auth::user()->id.' group by CAST(created_at AS DATE) order by CAST(created_at AS DATE) DESC LIMIT 15 ');
+    //     $count = 0;
+    //     foreach ($array_total as $value) {                  
+    //         if($count == 0){
+    //             $return['TOTAL_day'] = number_format($total_temp[0]+$value->valor, 2, ',', '.');
+    //         }
+    //         if(isset($return['TOTAL'])){
+    //             $return['TOTAL'] = $return['TOTAL'].", ".$total_temp[$count]+=$value->valor; 
+    //         }else{
+    //             $return['TOTAL'] = $total_temp[$count]+=$value->valor;
+    //         }
+    //         $count++;
+    //     }
+    //     // dd($return);
+    //     return isset($return);
+    // }    
 
     
 
