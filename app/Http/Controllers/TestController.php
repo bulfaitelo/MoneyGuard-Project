@@ -18,6 +18,7 @@ use Auth;
 use Carbon\Carbon;
 use App\Models\Http\Controllers\Sys\scheduleController; 
 use App\Models\Parametros\Titulos;
+use App\Models\User\User;
 use Storage;
 
 class TestController extends Controller
@@ -28,11 +29,18 @@ class TestController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(AtivosExtrato $ativos, UserController $userController)
-    {        
+    {      
         
-        $defaut_connection = config('database.default');
-        $database_info = config('database.connections.'.$defaut_connection);
-        dd($database_info);
+        // Auth:user()->dashboard()->sync($itens, ['config_id' => 1]);
+        // $test = Auth::id();
+        // $test = Auth::user(); // nao funciona
+        // $test = User::find(1)->dashboard()->toSql(); // funciona
+        dd(Auth::user()->dashboard);
+        // dd(Auth::user()->toArray() , USer::first('id' , 1)->toArray() );
+        dd($test);
+        // $defaut_connection = config('database.default');
+        // $database_info = config('database.connections.'.$defaut_connection);
+        // dd($database_info);
         //     echo "<pre>";
         // foreach($ativos->get() as $ativo){
         //     echo $ativo->valor_bruto_atual;

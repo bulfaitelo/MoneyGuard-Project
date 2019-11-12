@@ -717,6 +717,21 @@ class HomeApiController extends Controller
      * @return string
      */
     public function homeChartRendimentoCorretora() {
+        // o parametro define o setor o qual pertence o campo. 
+        // $array_representante = Auth::User()->dashboard(1);
+
+        // $extrato = AtivosExtrato::select(
+        //     DB::raw(" sum(valor_liquido_atual) as valor"),
+        //     'data_imports.data_import as created_at'            
+        //     )
+        //     ->where('representante_id', '1')
+        //     ->join('data_imports','data_import_id', '=', 'data_imports.id' )
+        //     ->groupBy('data_import_id')
+        //     ->take(15)
+        //     ->get();
+        
+        // dd($extrato);
+
         $dados = [
             'corretora' => 'vérios',
             'valor' => '1.124,99',
@@ -738,50 +753,11 @@ class HomeApiController extends Controller
             ]
         ] ;
 
-        $dados2 = [
-            'corretora' => 'easy',
-            'valor' => '2.124,99',
-            'rendimento' => '-10',
-            'url' => 'home',
-            'chartdata' => [
-
-                'labels' => [
-                    4,5,6,9,10, 12, 13,13,14
-                ],
-                'datasets' => [                   
-                    [
-                        'data' => [
-                            13352.05, 13348.88, 13349.46, 13345.17, 13345.94, 13335.37, 13326.46, 13327.40, 13319.42
-                            ]
-                    ]
-                ]
-                
-            ]
-        ] ;
-
-        $dados3 = [
-            'corretora' => 'total',
-            'valor' => '3.124,99',
-            'rendimento' => '-10',
-            'url' => 'home',
-            'chartdata' => [
-
-                'labels' => [
-                    4,5,6,9,10, 12, 13,13,14
-                ],
-                'datasets' => [                   
-                    [
-                        'data' => [
-                            18370.32, 18365.53, 18367.11, 18360.65, 18360.64, 18332.02, 18306.85, 18310.4, 18298.53,
-                            ]
-                    ]
-                ]
-                
-            ]
-        ] ;
+        
         $return[] = $dados;
-        $return[] = $dados2;
-        $return[] = $dados3;        
+              
         return response()->json($return);
+
+
     }
 }
