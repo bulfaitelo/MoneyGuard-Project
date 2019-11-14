@@ -60,14 +60,7 @@
   $(function () {
     $('.cor-fundo, .cor-borda').colorpicker({
       format: "rgb"
-    })    
-    // $('.cor-fundo').on('colorpickerChange', function(event) {
-    //   $('.cor-fundo .fa-square').css('color', event.color.toString());
-    // });
-
-    // $('.cor-borda').on('colorpickerChange', function(event) {
-    //   $('.cor-borda .fa-square').css('color', event.color.toString());
-    // });
+    }) 
   });
     
 </script>

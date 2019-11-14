@@ -83,9 +83,8 @@ class TitulosController extends Controller
         $save->border_color = $request->input('border_color');
         $check_save = $save->save();
         if($check_save){
-            Notify::success('success', "Atualizado com sucesso!");              
-            return redirect()->route('titulo.index'); // Melhorar isso assim que fizer a pagina de perguntas 
-    
+            return redirect()->back()->with('success', 'Representante atualiado!');       
+            return redirect()->route('titulo.index'); // Melhorar isso assim que fizer a pagina de perguntas     
         }
 
 

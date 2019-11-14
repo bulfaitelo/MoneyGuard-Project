@@ -61,18 +61,18 @@
 @section('script_blade')
 <script>
   $(function () { 
-  $('#representantes').DataTable({
-    "paging": false,
-    "lengthChange": false,
-    "searching": true,
-    "ordering": true,
-    "info": false,
-    "autoWidth": false,
-    "columnDefs": [
-    { "orderable": false, "targets": 5 }
-  ]
+    $('#representantes').DataTable({
+      "paging": false,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": true,
+      "info": false,
+      "autoWidth": false,
+      "columnDefs": [
+      { "orderable": false, "targets": 5 }
+    ]
+    });
   });
-});
 
 </script>
 @endsection

@@ -9,52 +9,59 @@
 
 {{--  Page Content  --}}
 @section('content')
-<div class="col-md-8 col-sm-12 col-xs-12">
-  <div class="x_panel">
-    <div class="x_title">
-      <h2>Editar Titulo: </h2>
-      <div class="clearfix"></div>
-    </div>
-    <div class="x_content">
-      <br>
-      {!! Form::open(['route'=>['titulo.update',$titulo->id], 'method'=>'put', 'class'=> 'form-horizontal form-label-left']) !!}
-      
-        <div class="form-group">
-          <label class="control-label col-md-3 col-sm-3 col-xs-12">Nome Exibição </label>
-          <div class="col-md-9 col-sm-9 col-xs-12">
-            <input name="nome_exibicao" class="form-control" value="{{$titulo->nome_exibicao}}" type="text">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="control-label col-md-3 col-sm-3 col-xs-12">Cor Fundo</label>
-          <div class="col-md-9 col-sm-9 col-xs-12">
-            <div class="input-group demo2 colorpicker-element">
-              <input name="back_color" value="{{$titulo->back_color}}" class="form-control" type="text">
-              <span class="input-group-addon"><i style="background-color: {{$titulo->back_color}};"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="control-label col-md-3 col-sm-3 col-xs-12">Cor Borda</label>
-          <div class="col-md-9 col-sm-9 col-xs-12">
-            <div class="input-group demo2 colorpicker-element">
-              <input name="border_color" value="{{$titulo->border_color}}" class="form-control" type="text">
-              <span class="input-group-addon"><i style="background-color: {{$titulo->border_color}};"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-md-9 col-md-offset-3">            
-            <button type="submit" class="btn btn-success">Salvar</button>
-          </div>
-        </div>
-        {!! Form::close() !!}
-    </div>
+<div class="card card-info">
+  {!! Form::open(['route'=>['titulo.update',$titulo->id], 'method'=>'put', 'class'=> '']) !!}
+  <div class="card-header">
+    <h3 class="card-title">Editar Titulo</h3>
   </div>
+  <div class="card-body">
+    <!-- Color Picker -->
+    <div class="form-group">
+      <label>Nome Exibição</label>
+      <input name="nome_exibicao" value="{{ @$titulo->nome_exibicao }}" type="text" class="form-control my-colorpicker1">
+    </div>
+    <!-- /.form group -->
+
+    <!-- Color Picker -->
+    <div class="form-group">
+      <label>Cor de Fundo</label>
+      <div class="input-group cor-fundo">
+        <input name="back_color" value="{{ @$titulo->back_color }}" data-color="{{ @$titulo->back_color }}" type="text" class="form-control">
+        <div class="input-group-append">
+            <span class="input-group-text colorpicker-input-addon"><i></i></span>
+        </div>
+      </div>
+      <!-- /.input group -->
+    </div>
+    <!-- Color Picker -->
+    <div class="form-group">
+      <label>Cor de Borda</label>
+      <div class="input-group cor-borda">
+        <input name="border_color" value="{{ @$titulo->border_color }}" data-color="{{ @$titulo->border_color }}" type="text" class="form-control">
+        <div class="input-group-append">
+            <span class="input-group-text colorpicker-input-addon"><i></i></span>
+        </div>
+      </div>
+      <!-- /.input group -->
+    </div>
+   
+  </div>
+  <div class="card-footer">
+    <button type="submit" class="btn btn-primary float-right">Salvar</button>
+  </div>
+  <!-- /.card-body -->
+  {!! Form::close() !!}
 </div>
 @endsection
 
 {{--  Optional script Blades  --}}
 @section('script_blade')
+<script>
+  $(function () {
+    $('.cor-fundo, .cor-borda').colorpicker({
+      format: "rgb"
+    }) 
+  });
+</script>
     
 @endsection
