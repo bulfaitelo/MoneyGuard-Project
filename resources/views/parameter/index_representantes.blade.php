@@ -49,6 +49,7 @@
           
 {{$representantes->links() }}
 @endif
+
 @endsection
 
 {{--  Optional script Blades  --}}
