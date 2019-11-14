@@ -63,6 +63,9 @@
     "ordering": true,
     "info": false,
     "autoWidth": false,
+    "columnDefs": [
+      { "orderable": false, "targets": 3 }
+  ]
   });
 });
 
