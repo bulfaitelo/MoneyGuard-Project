@@ -22,8 +22,8 @@
         <tr>
             <th>Nome</th>
             <th>Nome Exibição</th>         
-            <th>Data Criação</th>
             <th>Cor</th>            
+            <th></th>
         </tr>
         </thead>
         <tbody>
