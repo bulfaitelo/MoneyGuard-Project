@@ -15,6 +15,7 @@ class GenerateMenus
      */
     public function handle($request, Closure $next)
     {
+        // MainMenu
         // attention on "prepend" this need "<p>" on at the end of the code
         \Menu::make('MainMenu', function ($menu) {            
             // HOME
@@ -61,8 +62,64 @@ class GenerateMenus
                     ->link->attr(['class'=> 'nav-link']);
                 $m->logs->add('Backup', ['route'=>'logs.backup'])->prepend('<i class="far fa-circle nav-icon" > </i><p>')
                     ->link->attr(['class'=> 'nav-link']);
+            });             
+
+            // Exeternal Links
+            $menu->group(['class'=> 'nav-item'], function ($m){
+                $m->add('Links', '#')->prepend('<i class="nav-icon fas fa-edit" ></i><p>')
+                    ->link->attr(['class'=> 'nav-link']);   
+                $m->links->add('Laravel Collective')->prepend('<i class="fab fa-vuejs nav-icon" > </i><p>')
+                    ->link->href('https://laravelcollective.com/docs/6.0/html')
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);    
+                $m->links->add('Font Awesome')->prepend('<i class="far fa-circle nav-icon" > </i><p>')
+                    ->link->href('https://fontawesome.com/icons?d=gallery')
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);                                               
+                $m->links->add('Laravel Menu')->prepend('<i class="fab fa-github-alt nav-icon" > </i><p>')
+                    ->link->href('https://github.com/lavary/laravel-menu#links-href-property')
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);
+                $m->links->add('jQuery Sparklines')->prepend('<i class="far fa-circle nav-icon" > </i><p>')
+                    ->link->href('https://omnipotent.net/jquery.sparkline/#s-about')
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);
+                $m->links->add('Chartjs')->prepend('<i class="far fa-circle nav-icon" > </i><p>')
+                    ->link->href('http://www.chartjs.org/')
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);            
+                $m->links->add('Date Range Picker')->prepend('<i class="far fa-circle nav-icon" > </i><p>')
+                    ->link->href('http://www.daterangepicker.com/#ex5')
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);            
+                $m->links->add('Data Tables')->prepend('<i class="far fa-circle nav-icon" > </i><p>')
+                    ->link->href('https://datatables.net')
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);                   
+                $m->links->add('adminLTE')->prepend('<i class="far fa-circle nav-icon" > </i><p>')
+                    ->link->href('https://adminlte.io/themes/dev/AdminLTE/index2.html ')
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);    
+                $m->links->add('Git adminLTE')->prepend('<i class="fab fa-github-alt nav-icon" > </i><p>')
+                    ->link->href('https://github.com/ColorlibHQ/AdminLTE ')
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);         
+                $m->links->add('Axios')->prepend('<i class="fab fa-github-alt nav-icon" > </i><p>')
+                    ->link->href('https://github.com/axios/axios')
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);      
+                $m->links->add('Vue JS')->prepend('<i class="fab fa-vuejs nav-icon" > </i><p>')
+                    ->link->href('https://vuejs.org/v2/guide/installation.html')
+                    ->attr(['target' => '_blank', 'class' => 'nav-link']);                     
             });
 
+        });  
+        
+        // ConfigMenu
+        // attention on "prepend" this need "<p>" on at the end of the code
+        \Menu::make('ConfigMenu', function ($menu) {            
+            // HOME
+            $menu->group(['class'=> 'nav-item'], function ($m){
+                $m->add('Home', '#')->prepend('<i class="nav-icon fas fa-home text-success" ></i><p>')
+                ->link->attr(['class'=> 'nav-link']);
+                $m->home->add('Home', 'home')->prepend('<i class="far fa-circle nav-icon text-success" > </i><p>')
+                    ->link->attr(['class'=> 'nav-link']);
+                $m->home->add('test', 'test')->prepend('<i class="far fa-circle nav-icon text-success" > </i><p>')
+                    ->link->attr(['class'=> 'nav-link']);  
+                $m->home->add('vue', 'vue')->prepend('<i class="far fa-circle nav-icon text-success" > </i><p>')
+                    ->link->attr(['class'=> 'nav-link']);                
+
+            });   
             // Parametros
             $menu->group(['class'=> 'nav-item'], function ($m){
                 $m->add('Parametros', '#')->prepend('<i class="nav-icon fas fa-cog text-warning" ></i><p>')
@@ -114,7 +171,7 @@ class GenerateMenus
                     ->attr(['target' => '_blank', 'class' => 'nav-link']);                     
             });
 
-        });    
+        }); 
         return $next($request);
     }
 }
