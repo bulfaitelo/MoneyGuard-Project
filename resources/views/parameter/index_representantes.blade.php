@@ -36,7 +36,7 @@
                   <div style="background:{{$representante->border_color}}; width: 20px; height: 20px;  margin: 3px; border: 1px solid rgba(0, 0, 0, .2); float:left; " ></div>
                 </td>            
                 <td>
-                    <a class="btn btn-default" title="Detalhes" href="{{ route('representante.edit', $representante->id) }}">
+                    <a class="btn btn-default" title="Detalhes" href="{{ route('config.representante.edit', $representante->id) }}">
                         <i class="fa fa-edit"></i>
                     </a>
                 </td>       

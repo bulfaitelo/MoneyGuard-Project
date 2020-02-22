@@ -20,8 +20,8 @@
             <i class="fas fa-cogs"></i>
             Configurações
         </h6>
-        <a href="{{ route('config.dashboard.index') }}" class="dropdown-item">
-            <i class="fas fa-border-style"> </i> Dashboard            
+        <a href="{{ route('config.index') }}" class="dropdown-item">
+            <i class="fas fa-border-style"> </i> Configurações            
         </a>
         
         

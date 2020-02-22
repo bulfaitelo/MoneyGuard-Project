@@ -53,16 +53,7 @@ Route::group(['middleware'=> 'auth'], function() {
 		Route::post('/santander_rendimento', 'Santander\SantanderApiController@homeGraphicsRemdimento');		
 		Route::post('/ativo_preco', 'Ativos\AtivosApiController@homeGraphicsPreco');
 		Route::get('/home_dash_grafico_evo', 'HomeApiController@homeChartRendimentoCorretora');
-	});	
-
-	// Parameters
-	Route::group(['prefix' => 'options'], function() {
-		Route::resource('/titulo', 'Parameter\TitulosController');
-		Route::resource('/representante', 'Parameter\RepresentantesController');
-		Route::get('/schedule', 'Sys\scheduleController@index')->name('schedule.index');
-		Route::post('/schedule', 'Sys\scheduleController@index')->name('schedule.index');
-		Route::get('/schedule/sync', 'Sys\scheduleController@sync')->name('schedule.sync');
-	});	
+	});		
 
 	// Santander
 	Route::group(['prefix' => 'santander'], function() {		
@@ -81,7 +72,17 @@ Route::group(['middleware'=> 'auth'], function() {
 
 	// Configuração
 	Route::group(['prefix' => 'config', 'as' => 'config.'], function () {
-		Route::resource('/user/dashboard', 'User\DashboardConfigController');
+		Route::resource('/user/dashboard', 'Config\DashboardConfigController');
+		Route::resource('/', 'Config\ConfigController');
+
+		// Parameters
+		Route::group(['prefix' => 'parameters'], function() {
+			Route::resource('/titulo', 'Parameter\TitulosController');
+			Route::resource('/representante', 'Parameter\RepresentantesController');
+			Route::get('/schedule', 'Sys\scheduleController@index')->name('schedule.index');
+			Route::post('/schedule', 'Sys\scheduleController@index')->name('schedule.index');
+			Route::get('/schedule/sync', 'Sys\scheduleController@sync')->name('schedule.sync');
+		});	
 	});
 });
 

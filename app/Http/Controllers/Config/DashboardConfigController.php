@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Config;
 
 
 use App\Models\User\DashboardConfig;
@@ -23,6 +23,9 @@ class DashboardConfigController extends Controller
     {
         //        
         // dd(Auth::user()->id);
+        // $route = explode("/", \Route::current()->action['prefix'])[0];
+        
+        // dd($route);
         $userRepresentantes = AtivosExtrato::select('representante_id')
         ->where('user_id', Auth::user()->id)
         ->distinct()

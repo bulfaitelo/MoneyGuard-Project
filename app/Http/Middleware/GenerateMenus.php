@@ -120,15 +120,23 @@ class GenerateMenus
                     ->link->attr(['class'=> 'nav-link']);                
 
             });   
+            // DASHBOARD
+            $menu->group(['class'=> 'nav-item'], function ($m){
+                $m->add('Dashboard', '#')->prepend('<i class="nav-icon fas fa-home text-info" ></i><p>')
+                ->link->attr(['class'=> 'nav-link']);
+                $m->dashboard->add('Corretoras', [ 'route' => 'config.dashboard.index'])->prepend('<i class="far fa-circle nav-icon text-info" > </i><p>')
+                    ->link->attr(['class'=> 'nav-link']);
+           
+            });   
             // Parametros
             $menu->group(['class'=> 'nav-item'], function ($m){
                 $m->add('Parametros', '#')->prepend('<i class="nav-icon fas fa-cog text-warning" ></i><p>')
                 ->link->attr(['class'=> 'nav-link']);
-                $m->parametros->add('Representantes', [ 'route' => 'representante.index'])->prepend('<i class="far fa-circle nav-icon text-warning" > </i><p>')
+                $m->parametros->add('Representantes', [ 'route' => 'config.representante.index'])->prepend('<i class="far fa-circle nav-icon text-warning" > </i><p>')
                     ->link->attr(['class'=> 'nav-link']);
-                $m->parametros->add('Títulos', [ 'route' => 'titulo.index'])->prepend('<i class="far fa-circle nav-icon text-warning" > </i><p>')
+                $m->parametros->add('Títulos', [ 'route' => 'config.titulo.index'])->prepend('<i class="far fa-circle nav-icon text-warning" > </i><p>')
                     ->link->attr(['class'=> 'nav-link']);
-                $m->parametros->add('Schedule', [ 'route' => 'schedule.index'])->prepend('<i class="far fa-circle nav-icon text-warning" > </i><p>')
+                $m->parametros->add('Schedule', [ 'route' => 'config.schedule.index'])->prepend('<i class="far fa-circle nav-icon text-warning" > </i><p>')
                     ->link->attr(['class'=> 'nav-link']);
             });     
 

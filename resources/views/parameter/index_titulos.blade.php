@@ -39,7 +39,7 @@
               <div style="background:{{$titulo->border_color}}; width: 20px; height: 20px;  margin: 3px; border: 1px solid rgba(0, 0, 0, .2); float:left; " ></div>
             </td>            
             <td>
-                <a class="btn btn-default" title="Detalhes" href="{{ route('titulo.edit', $titulo->id) }}">
+                <a class="btn btn-default" title="Detalhes" href="{{ route('config.titulo.edit', $titulo->id) }}">
                     <i class="fa fa-edit"></i>
                 </a>
             </td>       

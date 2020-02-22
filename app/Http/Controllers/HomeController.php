@@ -29,11 +29,7 @@ class HomeController extends Controller
      */
     public function index()
     {        
-        
-        // $home_graphic = $this->homeGraphics();
-        $rendimento_mensal = $this->homeRendimetos();        
-        // dd($rendimento_mensal);
-        return view('home', compact('home_graphic', 'rendimento_mensal'));
+        return view('home');
     }
 
 

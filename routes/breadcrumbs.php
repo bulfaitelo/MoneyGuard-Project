@@ -56,32 +56,6 @@ Breadcrumbs::for('ativos.precos.show', function ($trail) {
     $trail->push('Detalhes');
 });
 
-// Home > Parametros
-Breadcrumbs::for('titulo.index', function ($trail) {
-    $trail->parent('home');
-    $trail->push('Titulos', route('titulo.index'));
-});
-
-// Home > Parametros
-Breadcrumbs::for('representante.index', function ($trail) {
-    $trail->parent('home');
-    $trail->push('representantes', route('representante.index'));
-});
-
-// Home > Parametros > Titulo
-Breadcrumbs::for('titulo.edit', function ($trail) {
-    $trail->parent('home');
-    $trail->push('Titulos', route('titulo.index'));
-    $trail->push('Editar');
-});
-
-// Home > Parametros > Representantes
-Breadcrumbs::for('representante.edit', function ($trail) {
-    $trail->parent('home');
-    $trail->push('Representantes', route('representante.index'));
-    $trail->push('Editar');
-});
-
 
 // Home > LOGS
 Breadcrumbs::for('logs.import', function ($trail) {
@@ -117,6 +91,48 @@ Breadcrumbs::for('schedule.index', function ($trail) {
 Breadcrumbs::for('vue', function ($trail) {
     $trail->push('VUE', route('vue'));
 });
+
+
+
+/****
+ * 
+ * CONFIG
+ * 
+ ****/
+
+    // CONFIG > INDEX
+    Breadcrumbs::for('config.index', function ($trail) {
+        $trail->push('Configurações', route('config.index'));
+    });
+
+    // Home > Parametros
+    Breadcrumbs::for('config.titulo.index', function ($trail) {
+        $trail->parent('config.index');
+        $trail->push('Titulos', route('config.titulo.index'));
+    });
+
+    // Home > Parametros
+    Breadcrumbs::for('config.representante.index', function ($trail) {
+        $trail->parent('config.index');
+        $trail->push('Representantes', route('config.representante.index'));
+    });
+
+    // Home > Parametros > Titulo
+    Breadcrumbs::for('config.titulo.edit', function ($trail) {
+        $trail->parent('config.index');
+        $trail->push('Titulos', route('config.titulo.index'));
+        $trail->push('Editar');
+    });
+
+    // Home > Parametros > Representantes
+    Breadcrumbs::for('config.representante.edit', function ($trail) {
+        $trail->parent('config.index');
+        $trail->push('Representantes', route('config.representante.index'));
+        $trail->push('Editar');
+    });
+
+
+// =========================
 
 
 Breadcrumbs::for('config.dashboard.index', function ($trail) {
