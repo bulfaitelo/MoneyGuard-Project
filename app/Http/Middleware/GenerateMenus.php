@@ -16,7 +16,7 @@ class GenerateMenus
     public function handle($request, Closure $next)
     {
         // attention on "prepend" this need "<p>" on at the end of the code
-        \Menu::make('test', function ($menu) {            
+        \Menu::make('MainMenu', function ($menu) {            
             // HOME
             $menu->group(['class'=> 'nav-item'], function ($m){
                 $m->add('Home', '#')->prepend('<i class="nav-icon fas fa-home text-success" ></i><p>')

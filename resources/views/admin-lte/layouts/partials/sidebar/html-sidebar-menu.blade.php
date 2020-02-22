@@ -1,7 +1,7 @@
 <!-- sidebar-menu -->
 <nav class="mt-2">
 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">    
-@foreach($test->all() as $item)  
+@foreach($MainMenu->all() as $item)  
     @if($item->hasChildren())
         <li @if($item->hasChildren())  @endif class="nav-item has-treeview @if($item->link->isActive) menu-open @endif ">    
             <a @lm_attrs($item->link) class="nav-link" @lm_endattrs href="{!! $item->url() !!}"  >                  
