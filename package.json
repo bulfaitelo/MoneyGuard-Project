@@ -85,7 +85,7 @@
         "inputmask": "^4.0.8",
         "ion-rangeslider": "^2.3.0",
         "ionicons": "^4.6.3",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "jquery-knob-chif": "^1.2.13",
         "jquery-mapael": "^2.2.0",
         "jquery-mask-plugin": "^1.14.15",
