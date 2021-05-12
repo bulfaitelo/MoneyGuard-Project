@@ -58,7 +58,7 @@
         "bootstrap-slider": "^10.6.2",
         "bootstrap-switch": "^3.4.0",
         "bootstrap4-duallistbox": "^4.0.1",
-        "chart.js": "^2.9.2",
+        "chart.js": "^2.9.4",
         "datatables.net": "^1.10.19",
         "datatables.net-autofill-bs4": "^2.3.3",
         "datatables.net-bs4": "^1.10.19",
