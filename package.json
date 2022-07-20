@@ -39,7 +39,7 @@
         "sass-loader": "^7.1.0",
         "set-value": "^3.0.1",
         "style-loader": "^0.19.1",
-        "terser": "^4.3.9",
+        "terser": "^4.8.1",
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
